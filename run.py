@@ -32,7 +32,8 @@ def main_menu_selection():
     try:
         while True:
             option = input("")
-            if option.upper() not in ["P", "R", "Q"]:
+            option = option.upper()
+            if option not in ["P", "R", "Q"]:
                 raise Exception
             else:
                 if option == 'P':
@@ -74,7 +75,8 @@ answers will need to be inputted but using the numbers on your keyboard
     try:
         while True:
             return_to_menu = input("")
-            if return_to_menu.upper() not in ["M"]:
+            return_to_menu = return_to_menu.upper()
+            if return_to_menu not in ["M"]:
                 raise Exception
             else:
                 main()
@@ -110,7 +112,8 @@ def question_amount_selection():
     except Exception:
         print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
 15 ''')
-      
+        question_amount_selection()
+
 
 def main():
     startup()
