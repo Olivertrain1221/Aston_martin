@@ -70,6 +70,17 @@ heads!''')
     print('''In this game you will be asked a range of questions and the 
 answers will need to be inputted but using the numbers on your keyboard
 "1, 2, 3".''')
+    print('''Press M for menu to return''')
+    try:
+        while True:
+            return_to_menu = input("")
+            if return_to_menu.upper() not in ["M"]:
+                raise Exception
+            else:
+                main()
+    except Exception:
+        print(" DERRRRR try 'M'")
+        rule_options()
 
 
 def question_amount_selection():
