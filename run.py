@@ -1,4 +1,5 @@
 def startup():
+    
     """
     Game starts with message and options
     """
@@ -42,7 +43,7 @@ def main_menu_selection():
                     break
                 elif option == 'Q':
                     startup()
-                    break    
+                    break
     except Exception:
         print('''Hmmm you didnt follow the rules!!! You entered please try
 again with valid input.So once again Please type "P" to play,
@@ -52,8 +53,12 @@ again with valid input.So once again Please type "P" to play,
 
 def gets_username():
     """
-    Game startup of quiz
+    Gets the users name
     """
+    print("Good choice on playing, but first lets get your name!")
+    users_name = input("")
+    print(f"Excellent thankyou for entering your name: {users_name}")
+    question_amount_selection()
 
 
 def rule_options():
@@ -66,6 +71,35 @@ heads!''')
 answers will need to be inputted but using the numbers on your keyboard
 "1, 2, 3".''')
 
+
+def question_amount_selection():
+    """
+    Allows the user to select amount of questions
+    """
+    print('''Please enter either a 5, 10, 15 to select the amount of questions
+''')
+    try:
+        while True:
+            question_selection = int(input(""))
+            if question_selection not in [5, 10, 15]:
+                raise Exception
+            else:
+                if question_selection == 5:
+                    # function for 5 q
+                    print("working on 5")
+                    break
+                elif question_selection == 10:
+                    # function for 10 q
+                    print("working on 10")
+                    break
+                elif question_selection == 15:
+                    # function for 15 q
+                    print("working on 15")
+                    break
+    except Exception:
+        print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
+15 ''')
+      
 
 def main():
     startup()
