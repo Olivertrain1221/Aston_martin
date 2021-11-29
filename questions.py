@@ -105,13 +105,12 @@ html_questions = [
         stock market:''',
         'answers': ['True',
         'False'],
-        'correct': '''Cygent'''
+        'correct': '''Trur'''
     },
     {    
         'question': '''There is currently 2 new engines which are AMG based what are these:''',
-        'answers': ['V6 twin turbo',
-        'V8 twin turbo',
-        'V12 twin turbo'],
+        'answers': ['V6 twin turbo, v8 twin turbo',
+        'V8 twin turbo, V12 twin turbo'],
         'correct': '''V12 twin turbo'''
     },
     {    
@@ -121,37 +120,28 @@ html_questions = [
         '3.8 650'],
         'correct': '''3.4 715'''
     },
-
-    ##
-
-    html_questions = [
     {
-        'question': 'What is the biggest naturally aspirated engine the Aston Martin sell?:',
-        'answers': ['V8', 'v12', '1.8'],
+        'question': 'In James Bond the big red button under the gear lever was to do what?:',
+        'answers': ['Super speed', 'Fire the rockets', 'Ejector Seat'],
         'correct': 'V12'
     },
     {
-        'question': '''You may remember in James bond there is a "special" branch
-         for customiseable anything:''',
-        'answers': ['Cue', 'Q', 'K'],
-        'correct': 'Q'
+        'question': '''The family V12 aston martin is called what?:''',
+        'answers': ['Vantage', 'Valkerie', 'Rapide'],
+        'correct': 'Rapide'
     },
     {
-        'question': '''The most iconic Aston Martin is:''',
-        'answers': ['Vantage', 'DB9', 'DB5'],
-        'correct': 'DB5'
+        'question': '''Aston Martin was founded by who:''',
+        'answers': ['Aston Mcgregor + David Martin', 'Lionel Martin and Robert Bamford', 'Boris Johnson and Lionel Ritchie'],
+        'correct': 'Lionel Martin and Robert Bamford'
     },
     {
-        'question': '''What is Aston Martins show stopper for safety:''',
-        'answers': ['There are extra airbags in the seats', 
-        'The bonnet air bags to cover the screen for reinforcement',
-        '''The last and most extreme of 70mph crumple zone will drop the engine
-        V8 OR V12 out the bottom pushing the car up and over engine to
-        decrease imapact to cockpit'''],
-        'correct': '''The last and most extreme of 70mph crumple zone will drop the engine
-        V8 OR V12 out the bottom oushing the car up and over engine to
-        decrease imapact to cockpit'''
-    },
+        'question': '''The aston martin V600 has what engine:''',
+        'answers': ['V12', 
+        'V8',
+        '''V8 Twin Super Charge'''],
+        'correct': '''V8 Twin Super Charge'''
+    },######
     {
         'question': '''In the vanquish there is a option to have a square steering
         wheel:''',
