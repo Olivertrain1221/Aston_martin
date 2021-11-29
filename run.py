@@ -1,8 +1,19 @@
+from questions import aston_questions
+import random
+import os
+from os import system, name
+import time
+
+
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 def startup():
-    
     """
     Game starts with message and options
     """
+    clear()
     print("Welcome to the Aston Martin Quiz\n")
     print("""
                                  _..-------++._
@@ -13,9 +24,14 @@ def startup():
                [__]==// .-. \\==`===========/==// .-. \\=[__]
                  `-._|\ `-' /|___\_________/___|\ `-' /|_.'
                        `---'                     `---'""")
+    user_main_menu()
 
 
 def user_main_menu():
+    """
+    Displays the main menu and gives the user the option to
+    read rules, playu or quit
+    """
     print("Are you ready to play?")
     print("""
     -          Play           -
@@ -23,11 +39,12 @@ def user_main_menu():
     -          Quit           -
     Type 'P' for play, 'R' for rules or 'Q' for quit.""")
     main_menu_selection()
+    
 
 
 def main_menu_selection():
     """
-    Checking what the user inputs
+    Checking what the user inputs and validates,
     """
     try:
         while True:
@@ -56,16 +73,21 @@ def gets_username():
     """
     Gets the users name
     """
+    clear()
     print("Good choice on playing, but first lets get your name!")
     users_name = input("")
+    clear()
+    time.sleep(1.5)
     print(f"Excellent thankyou for entering your name: {users_name}")
+    time.sleep(1.0)
     question_amount_selection()
 
 
 def rule_options():
     """
-    when selected will display rules
+    when selected will display rules a
     """
+    clear()
     print('''Welcome to the Aston Martin quiz, a quiz for all you buzzing petrol
 heads!''')
     print('''In this game you will be asked a range of questions and the 
@@ -115,9 +137,12 @@ def question_amount_selection():
         question_amount_selection()
 
 
-def main():
-    startup()
-    user_main_menu()
+def question_amount():
+    """
+    Creates the random number from questions.py 
+    5? 10-? 15?.
+    """
 
 
-main()
+startup()
+

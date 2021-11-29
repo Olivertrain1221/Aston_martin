@@ -1,4 +1,4 @@
-html_questions = [
+aston_questions = [
     {
         'question': 'What is the biggest naturally aspirated engine the Aston Martin sell?:',
         'answers': ['V8', 'v12', '1.8'],
@@ -143,8 +143,7 @@ html_questions = [
         'correct': '''V8 Twin Super Charge'''
     },######
     {
-        'question': '''In the vanquish there is a option to have a square steering
-        wheel:''',
+        'question': '''+:''',
         'answers': ['True',
         '''False'''],
         'correct': '''True'''
@@ -176,4 +175,5 @@ html_questions = [
         '4.4 550',
         '3.8 650'],
         'correct': '''3.4 715'''
-    },
+    }
+]
