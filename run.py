@@ -39,7 +39,6 @@ def user_main_menu():
     -          Quit           -
     Type 'P' for play, 'R' for rules or 'Q' for quit.""")
     main_menu_selection()
-    
 
 
 def main_menu_selection():
@@ -79,7 +78,7 @@ def gets_username():
     clear()
     time.sleep(1.5)
     print(f"Excellent thankyou for entering your name: {users_name}")
-    time.sleep(1.0)
+    time.sleep(1)
     question_amount_selection()
 
 
@@ -113,36 +112,61 @@ def question_amount_selection():
     """
     print('''Please enter either a 5, 10, 15 to select the amount of questions
 ''')
-    try:
-        while True:
+    while True:
+        try:
             question_selection = int(input(""))
             if question_selection not in [5, 10, 15]:
                 raise Exception
             else:
                 if question_selection == 5:
-                    # function for 5 q
                     print("working on 5")
+                    display_five_questions()
                     break
                 elif question_selection == 10:
                     # function for 10 q
                     print("working on 10")
+                    display_ten_questions()
                     break
                 elif question_selection == 15:
                     # function for 15 q
                     print("working on 15")
+                    display_fifteen_questions()
                     break
-    except Exception:
-        print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
+        except Exception:
+            print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
 15 ''')
-        question_amount_selection()
+            question_amount_selection()
 
 
-def question_amount():
+def generate_random_question(question_selection):
+    previous_number = []
+    game_questions = []
+
+    while len(game_questions) < user_choice:
+        x = rand.int(0, len(question_selection)) """between 0 and 29 to do"""
+        if x not in previous_number:
+            previous_number.append(x)
+            game_questions.append(array_of_questions[x])
+        # return to game loop now
+
+def display_questions(game_questions):
+    while i < user_wants:
+        print(game_questions[0]("question"))
+        print(game_questions[0, 1, 2]("answers"))
+        user_gamechoice_input()
+
+
+def array_of_questions():
     """
-    Creates the random number from questions.py 
-    5? 10-? 15?.
+    Gets the questions in a form of an array
     """
+    question = questions_dict["question"]
+    answers = questions_dict["answers"]
+    correct = questions_dict["correct"]
 
 
+def user_gameplay_input():
+    users_choice = input("")
+
+    
 startup()
-

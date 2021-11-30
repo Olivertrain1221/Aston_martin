@@ -48,7 +48,7 @@ aston_questions = [
         'correct': '''Cygent'''
     },
     {    
-        'question': '''There is currently 2 new engines which are AMG based what are these:''',
+        'question': '''There are currently 2 new engines which are AMG based what are these:''',
         'answers': ['V6 twin turbo',
         'V8 twin turbo',
         'V12 twin turbo'],
