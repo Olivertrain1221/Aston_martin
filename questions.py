@@ -5,13 +5,12 @@ aston_questions = [
         'correct': 'V12'
     },
     {
-        'question': '''You may remember in James bond there is a "special" branch
-         for customiseable anything:''',
+        'question': 'You may remember in James bond there is a "special" branch for customiseable anything:',
         'answers': ['Cue', 'Q', 'K'],
         'correct': 'Q'
     },
     {
-        'question': '''The most iconic Aston Martin is:''',
+        'question': 'The most iconic Aston Martin is:',
         'answers': ['Vantage', 'DB9', 'DB5'],
         'correct': 'DB5'
     },
@@ -32,11 +31,11 @@ aston_questions = [
         'correct': 'True'
     },
     {
-        'question': '''What is Aston Martins new SUV:''',
+        'question': 'What is Aston Martins new SUV:',
         'answers': ['Vantage',
                     'DB11',
                     'DBX'],
-        'correct': '''DBX'''
+        'correct': 'DBX'
     },
     {
         'question': 'What Is the smallest car aston martin have ever made:',
@@ -61,7 +60,7 @@ aston_questions = [
     },
     {
         'question': 'What gearbox is in the AMR Vantage V12?:',
-        'answers': ['6 speed manual', 
+        'answers': ['6 speed manual',
                     '8 speed automatic',
                     'Dog leg 7 speed manual'],
         'correct': 'Dog leg 7 speed manual'
@@ -106,13 +105,13 @@ aston_questions = [
                     'False'],
         'correct': 'True'
     },
-    {   
+    {
         'question': 'There is currently 2 new engines which are AMG based what are these:',
         'answers': ['V6 twin turbo, v8 twin turbo',
                     'V8 twin turbo, V12 twin turbo'],
         'correct': 'V12 twin turbo'
     },
-    {    
+    {
         'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
         'answers': ['3.4 715',
                     '4.4 550',
@@ -167,14 +166,14 @@ aston_questions = [
                     'Cygnet'],
         'correct': 'Cygent'
     },
-    {    
+    {
         'question': 'There is currently 2 new engines which are AMG based what are these:',
         'answers': ['V6 twin turbo',
                     'V8 twin turbo',
                     'V12 twin turbo'],
         'correct': 'V12 twin turbo'
     },
-    {    
+    {
         'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
         'answers': ['3.4 715',
                     '4.4 550',

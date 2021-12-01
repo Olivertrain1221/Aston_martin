@@ -150,7 +150,7 @@ def generate_random_question(question_selection):
     while len(game_questions) < question_selection:
         print(f"this is previous_number {previous_number}")
         print(f"this is game_questions {game_questions}")
-        x = random.randint(0, len(aston_questions))
+        x = random.randint(0, (len(aston_questions) - 1))
         print(f"this is random number {x}")
         if x not in previous_number:
             previous_number.append(x)
@@ -165,8 +165,8 @@ def display_questions(game_questions, question_selection):
     print("display start")
     i = 0
     while i < question_selection:
-        print(game_questions[i]("question"))
-        print(game_questions[i](f"1 - {game_questions[i]('answers'[0])} 2 - {game_questions[i]('answers'[1])} 3- {game_questions[i]('answers'[2])}"))
+        print(game_questions[i]["question"])
+        print(f"1 - {game_questions[i]['answers'][0]} 2 - {game_questions[i]['answers'][1]} 3- {game_questions[i]['answers'][2]}")
         i = i + 1
         user_gameplay_input()
 
