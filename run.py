@@ -14,6 +14,9 @@ import time
 
 
 def clear():
+    """
+    Adds the clear terminal function
+    """
     os.system("cls" if os.name == "nt" else "clear")
 
 
@@ -127,18 +130,15 @@ def question_amount_selection():
                 raise Exception
             else:
                 if question_selection == 5:
-                    print("working on 5")
                     generate_random_question(question_selection)
                     break
                 elif question_selection == 10:
                     # function for 10 q
-                    print("working on 10")
-                    display_ten_questions()
+                    generate_random_question(question_selection)
                     break
                 elif question_selection == 15:
                     # function for 15 q
-                    print("working on 15")
-                    display_fifteen_questions()
+                    generate_random_question(question_selection)
                     break
         except Exception:
             print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
@@ -146,31 +146,27 @@ def question_amount_selection():
             question_amount_selection_loop()
 
 
-def question_amount_selection_loop():
-    """
-    Going to loop over code question generator funtions
-    """
-
 
 def generate_random_question(question_selection):
+    """
+    Generates a random question by getting it from question_selections
+    also uses user input to loop through depending on user input
+    """
     previous_number = []
     game_questions = []
     while len(game_questions) < question_selection:
-        print(f"this is previous_number {previous_number}")
-        print(f"this is game_questions {game_questions}")
         x = random.randint(0, (len(aston_questions) - 1))
-        print(f"this is random number {x}")
         if x not in previous_number:
             previous_number.append(x)
             game_questions.append(aston_questions[x])
-        print(x)
 
-    print("Got to end of while loop")
     display_questions(game_questions, question_selection)
 
 
 def display_questions(game_questions, question_selection):
-    print("display start")
+    """
+    Gets the random questions generated and then displays
+    """
     i = 0
     while i < question_selection:
         print(game_questions[i]["question"])
@@ -189,7 +185,23 @@ def array_of_questions():
 
 
 def user_gameplay_input():
+    """
+    Users game play input
+    """
+    print("Please select either a 1, 2 or 3 for your answer")
     users_choice = input("")
+    print(f"You selected {users_choice}!")
+
+    
+
+
+def compare_user_input_to_correct_answer(game_questions):
+    """
+    Will compare users input to correct answer to verify
+    """
+    correct_answer = game_questions[2]("correct")
+    
+
 
 
 startup()
