@@ -120,7 +120,7 @@ def question_amount_selection():
             else:
                 if question_selection == 5:
                     print("working on 5")
-                    display_five_questions()
+                    generate_random_question(question_selection)
                     break
                 elif question_selection == 10:
                     # function for 10 q
@@ -135,25 +135,40 @@ def question_amount_selection():
         except Exception:
             print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
 15 ''')
-            question_amount_selection()
+            question_amount_selection_loop()
+
+
+def question_amount_selection_loop():
+    """
+    Going to loop over code question generator funtions
+    """
 
 
 def generate_random_question(question_selection):
     previous_number = []
     game_questions = []
-
-    while len(game_questions) < user_choice:
-        x = rand.int(0, len(question_selection)) """between 0 and 29 to do"""
+    while len(game_questions) < question_selection:
+        print(f"this is previous_number {previous_number}")
+        print(f"this is game_questions {game_questions}")
+        x = random.randint(0, len(aston_questions))
+        print(f"this is random number {x}")
         if x not in previous_number:
             previous_number.append(x)
-            game_questions.append(array_of_questions[x])
-        # return to game loop now
+            game_questions.append(aston_questions[x])
+        print(x)
 
-def display_questions(game_questions):
-    while i < user_wants:
-        print(game_questions[0]("question"))
-        print(game_questions[0, 1, 2]("answers"))
-        user_gamechoice_input()
+    print("Got to end of while loop")
+    display_questions(game_questions, question_selection)
+
+
+def display_questions(game_questions, question_selection):
+    print("display start")
+    i = 0
+    while i < question_selection:
+        print(game_questions[i]("question"))
+        print(game_questions[i](f"1 - {game_questions[i]('answers'[0])} 2 - {game_questions[i]('answers'[1])} 3- {game_questions[i]('answers'[2])}"))
+        i = i + 1
+        user_gameplay_input()
 
 
 def array_of_questions():
@@ -168,5 +183,5 @@ def array_of_questions():
 def user_gameplay_input():
     users_choice = input("")
 
-    
+
 startup()

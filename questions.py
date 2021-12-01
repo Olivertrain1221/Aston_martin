@@ -16,164 +16,169 @@ aston_questions = [
         'correct': 'DB5'
     },
     {
-        'question': '''What is Aston Martins show stopper for safety:''',
-        'answers': ['There are extra airbags in the seats', 
-        'The bonnet air bags to cover the screen for reinforcement',
-        '''The last and most extreme of 70mph crumple zone will drop the engine
-        V8 OR V12 out the bottom pushing the car up and over engine to
-        decrease imapact to cockpit'''],
-        'correct': '''The last and most extreme of 70mph crumple zone will drop the engine
-        V8 OR V12 out the bottom oushing the car up and over engine to
-        decrease imapact to cockpit'''
+        'question': 'What is Aston Martins show stopper for safety:',
+        'answers': ['There are extra airbags in the seats',
+                    'The bonnet air bags to cover the screen for reinforcement',
+                    'The last and most extreme of 70mph crumple zone will drop the engine'
+                    'V8 OR V12 out the bottom pushing the car up and over engine to'
+                    'decrease imapact to cockpit'],
+        'correct': 'The last and most extreme of 70mph crumple zone will drop the engine'
+                   'V8 OR V12 out the bottom oushing the car up and over engine to'
+                   'decrease imapact to cockpit'
     },
     {
-        'question': '''In the vanquish there is a option to have a square steering
-        wheel:''',
-        'answers': ['True',
-        '''False'''],
-        'correct': '''True'''
+        'question': 'In the vanquish there is a option to have a square steering wheel:',
+        'answers': ['True', 'False'],
+        'correct': 'True'
     },
     {
         'question': '''What is Aston Martins new SUV:''',
         'answers': ['Vantage',
-        'DB11',
-        'DBX'],
+                    'DB11',
+                    'DBX'],
         'correct': '''DBX'''
     },
     {
-        'question': '''What Is the smallest car aston martin have ever made:''',
+        'question': 'What Is the smallest car aston martin have ever made:',
         'answers': ['Vantage',
-        'DB11',
-        'Cygnet'],
-        'correct': '''Cygent'''
+                    'DB11',
+                    'Cygnet'],
+        'correct': 'Cygent'
     },
-    {    
-        'question': '''There are currently 2 new engines which are AMG based what are these:''',
+    {
+        'question': 'There are currently 2 new engines which are AMG based what are these:',
         'answers': ['V6 twin turbo',
-        'V8 twin turbo',
-        'V12 twin turbo'],
-        'correct': '''V12 twin turbo'''
+                    'V8 twin turbo',
+                    'V12 twin turbo'],
+        'correct': 'V12 twin turbo'
     },
-    {    
-        'question': '''The DBS Superleggera has a 0.60 time of .... and has .... bhp:''',
+    {
+        'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
         'answers': ['3.4 715',
-        '4.4 550',
-        '3.8 650'],
-        'correct': '''3.4 715'''
+                    '4.4 550',
+                    '3.8 650'],
+        'correct': '3.4 715'
     },
-
-    ###
     {
         'question': 'What gearbox is in the AMR Vantage V12?:',
-        'answers': ['6 speed manual', '8 speed automatic', 
-        'Dog leg 7 speed manual'],
+        'answers': ['6 speed manual', 
+                    '8 speed automatic',
+                    'Dog leg 7 speed manual'],
         'correct': 'Dog leg 7 speed manual'
     },
     {
-        'question': '''What is so special About the ranges sportscars
-        in terms of weight over each axel (front to rear):''',
-        'answers': ['45:55', '51:49', '30:70'],
+        'question': 'What is so special About the ranges sportscars in terms of weight over each axel (front to rear):',
+        'answers': ['45:55',
+                    '51:49',
+                    '30:70'],
         'correct': '51:49'
     },
     {
-        'question': '''What is car used in the film Casino royale:''',
-        'answers': ['Vantage', 'DB9', 'DBS'],
+        'question': 'What is car used in the film Casino royale:',
+        'answers': ['Vantage',
+                    'DB9',
+                    'DBS'],
         'correct': 'DBS'
     },
     {
-        'question': '''What make do aston martin use for brake callipers:''',
-        'answers': ['Pagid', 
-        'Stopmeo',
-        '''Brembo'''],
-        'correct': '''Brembo'''
+        'question': 'What make do aston martin use for brake callipers:',
+        'answers': ['Pagid',
+                    'Stopmeo',
+                    'Brembo'],
+        'correct': 'Brembo'
     },
     {
-        'question': '''What does GT stand for in the model DB11:''',
+        'question': 'What does GT stand for in the model DB11:',
         'answers': ['Great toruqe',
-        '''Grand Tourer'''],
-        'correct': '''Grand Tourer'''
+                    'Grand Tourer'],
+        'correct': 'Grand Tourer'
     },
     {
-        'question': '''What is special about the Vantage range:''',
+        'question': 'What is special about the Vantage range:',
         'answers': ['The car was only originaly designed to take a V8',
-        'The car is big enough for golf clubs in the boot',
-        'The car is grey unless speciefied otherwise'],
-        'correct': '''The car was only originaly designed to take a V8'''
+                    'The car is big enough for golf clubs in the boot',
+                    'The car is grey unless speciefied otherwise'],
+        'correct': 'The car was only originaly designed to take a V8'
     },
     {
-        'question': '''Aston Martin as a business is now floating on the
-        stock market:''',
+        'question': 'Aston Martin as a business is now floating on the stock market:',
         'answers': ['True',
-        'False'],
-        'correct': '''Trur'''
+                    'False'],
+        'correct': 'True'
     },
-    {    
-        'question': '''There is currently 2 new engines which are AMG based what are these:''',
+    {   
+        'question': 'There is currently 2 new engines which are AMG based what are these:',
         'answers': ['V6 twin turbo, v8 twin turbo',
-        'V8 twin turbo, V12 twin turbo'],
-        'correct': '''V12 twin turbo'''
+                    'V8 twin turbo, V12 twin turbo'],
+        'correct': 'V12 twin turbo'
     },
     {    
-        'question': '''The DBS Superleggera has a 0.60 time of .... and has .... bhp:''',
+        'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
         'answers': ['3.4 715',
-        '4.4 550',
-        '3.8 650'],
-        'correct': '''3.4 715'''
+                    '4.4 550',
+                    '3.8 650'],
+        'correct': '3.4 715'
     },
     {
         'question': 'In James Bond the big red button under the gear lever was to do what?:',
-        'answers': ['Super speed', 'Fire the rockets', 'Ejector Seat'],
+        'answers': ['Super speed',
+                    'Fire the rockets',
+                    'Ejector Seat'],
         'correct': 'V12'
     },
     {
-        'question': '''The family V12 aston martin is called what?:''',
-        'answers': ['Vantage', 'Valkerie', 'Rapide'],
+        'question': 'The family V12 aston martin is called what?:',
+        'answers': ['Vantage',
+                    'Valkerie',
+                    'Rapide'],
         'correct': 'Rapide'
     },
     {
-        'question': '''Aston Martin was founded by who:''',
-        'answers': ['Aston Mcgregor + David Martin', 'Lionel Martin and Robert Bamford', 'Boris Johnson and Lionel Ritchie'],
+        'question': 'Aston Martin was founded by who:',
+        'answers': ['Aston Mcgregor + David Martin',
+                    'Lionel Martin and Robert Bamford',
+                    'Boris Johnson and Lionel Ritchie'],
         'correct': 'Lionel Martin and Robert Bamford'
     },
     {
-        'question': '''The aston martin V600 has what engine:''',
-        'answers': ['V12', 
-        'V8',
-        '''V8 Twin Super Charge'''],
-        'correct': '''V8 Twin Super Charge'''
-    },######
+        'question': 'The aston martin V600 has what engine:',
+        'answers': ['V12',
+                    'V8',
+                    'V8 Twin Super Charge'],
+        'correct': 'V8 Twin Super Charge'
+    },
     {
-        'question': '''+:''',
+        'question': '+:',
         'answers': ['True',
-        '''False'''],
-        'correct': '''True'''
+                    'False'],
+        'correct': 'True'
     },
     {
-        'question': '''What is Aston Martins new SUV:''',
+        'question': 'What is Aston Martins new SUV:',
         'answers': ['Vantage',
-        'DB11',
-        'DBX'],
-        'correct': '''DBX'''
+                    'DB11',
+                    'DBX'],
+        'correct': 'DBX'
     },
     {
-        'question': '''What Is the smallest car aston martin have ever made:''',
+        'question': 'What Is the smallest car aston martin have ever made:',
         'answers': ['Vantage',
-        'DB11',
-        'Cygnet'],
-        'correct': '''Cygent'''
+                    'DB11',
+                    'Cygnet'],
+        'correct': 'Cygent'
     },
     {    
-        'question': '''There is currently 2 new engines which are AMG based what are these:''',
+        'question': 'There is currently 2 new engines which are AMG based what are these:',
         'answers': ['V6 twin turbo',
-        'V8 twin turbo',
-        'V12 twin turbo'],
-        'correct': '''V12 twin turbo'''
+                    'V8 twin turbo',
+                    'V12 twin turbo'],
+        'correct': 'V12 twin turbo'
     },
     {    
-        'question': '''The DBS Superleggera has a 0.60 time of .... and has .... bhp:''',
+        'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
         'answers': ['3.4 715',
-        '4.4 550',
-        '3.8 650'],
-        'correct': '''3.4 715'''
+                    '4.4 550',
+                    '3.8 650'],
+        'correct': '3.4 715'
     }
 ]
