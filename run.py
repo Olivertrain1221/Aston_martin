@@ -1,3 +1,11 @@
+# Add user input into it next and to display
+#validate the users input as to what the correct answeris
+# then call a win/ lose func dependant on result (if)
+# add counter into the game lives
+#
+
+
+
 from questions import aston_questions
 import random
 import os
