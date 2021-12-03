@@ -171,11 +171,24 @@ def display_questions(game_questions, question_selection):
         print(game_questions[i]["question"])
         print(f"1 - {game_questions[i]['answers'][0]} 2 - {game_questions[i]['answers'][1]} 3- {game_questions[i]['answers'][2]}")
         print()
+        correct_answer = generate_correct_answer(game_questions[i])
         i = i + 1
-        user_gameplay_input()
+        user_gameplay_input(correct_answer)
 
 
-def user_gameplay_input():
+def generate_correct_answer(game_questions):
+    """
+    generates the correct answer
+    """
+    if game_questions['correct'] == game_questions['answers'][0]:
+        return 1
+    elif game_questions['correct'] == game_questions['answers'][1]:
+        return 2
+    elif game_questions['correct'] == game_questions['answers'][2]:
+        return 3
+
+
+def user_gameplay_input(correct_answer):
     """
     Users game play input
     """
@@ -188,20 +201,20 @@ def user_gameplay_input():
             if users_choice not in [1, 2, 3]:
                 raise Exception
             else:
-                #run the compare module#
+                checks_user_to_correct(users_choice, correct_answer)
                 print("Got to users choice Else end")
         except Exception:
             print("You didnt obviously read any of my hard work its 1 2 or 3 !!!!!")
 
-# def checks_user_to_correct(game_questions, users_choice):  # unsure on what variables required to pass through
-#     """
-#     Will compare users input to correct answer to verify
-#     """
-#     correct_answer = game_questions[0]]("correct")
-#     if users_choice  #value as a str == correct_answer:
-#         print("THATS CORRECT!!!")
-#     else:
-#         print("your wrong...... unlucky")
+
+def checks_user_to_correct(users_choice, correct_answer):
+    """
+    Will compare users input to correct answer to verify
+    """
+    if users_choice == correct_answer:
+        print("THATS CORRECT!!!")
+    else:
+        print("your wrong...... unlucky")
 
 
 startup()
