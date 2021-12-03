@@ -1,9 +1,8 @@
 # Add user input into it next and to display
-#validate the users input as to what the correct answeris
+# validate the users input as to what the correct answeris
 # then call a win/ lose func dependant on result (if)
 # add counter into the game lives
 #
-
 
 
 from questions import aston_questions
@@ -171,17 +170,9 @@ def display_questions(game_questions, question_selection):
     while i < question_selection:
         print(game_questions[i]["question"])
         print(f"1 - {game_questions[i]['answers'][0]} 2 - {game_questions[i]['answers'][1]} 3- {game_questions[i]['answers'][2]}")
+        print()
         i = i + 1
         user_gameplay_input()
-
-
-def array_of_questions():
-    """
-    Gets the questions in a form of an array
-    """
-    question = questions_dict["question"]
-    answers = questions_dict["answers"]
-    correct = questions_dict["correct"]
 
 
 def user_gameplay_input():
@@ -189,19 +180,28 @@ def user_gameplay_input():
     Users game play input
     """
     print("Please select either a 1, 2 or 3 for your answer")
-    users_choice = input("")
-    print(f"You selected {users_choice}!")
+    while True:
+        try:
+            users_choice = input("")
+            users_choice = int(users_choice)
+            print(f"You selected {str(users_choice)}!")
+            if users_choice not in [1, 2, 3]:
+                raise Exception
+            else:
+                #run the compare module#
+                print("Got to users choice Else end")
+        except Exception:
+            print("You didnt obviously read any of my hard work its 1 2 or 3 !!!!!")
 
-    
-
-
-def compare_user_input_to_correct_answer(game_questions):
-    """
-    Will compare users input to correct answer to verify
-    """
-    correct_answer = game_questions[2]("correct")
-    
-
+# def checks_user_to_correct(game_questions, users_choice):  # unsure on what variables required to pass through
+#     """
+#     Will compare users input to correct answer to verify
+#     """
+#     correct_answer = game_questions[0]]("correct")
+#     if users_choice  #value as a str == correct_answer:
+#         print("THATS CORRECT!!!")
+#     else:
+#         print("your wrong...... unlucky")
 
 
 startup()
