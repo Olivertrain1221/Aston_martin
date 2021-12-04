@@ -1,7 +1,7 @@
 aston_questions = [
     {
         'question': 'What is the biggest naturally aspirated engine the Aston Martin sell?:',
-        'answers': ['V8', 'v12', '1.8'],
+        'answers': ['V8', 'V12', '1.8'],
         'correct': 'V12'
     },
     {
@@ -15,15 +15,9 @@ aston_questions = [
         'correct': 'DB5'
     },
     {
-        'question': 'What is Aston Martins show stopper for safety:',
-        'answers': ['There are extra airbags in the seats',
-                    'The bonnet air bags to cover the screen for reinforcement',
-                    'The last and most extreme of 70mph crumple zone will drop the engine'
-                    'V8 OR V12 out the bottom pushing the car up and over engine to'
-                    'decrease imapact to cockpit'],
-        'correct': 'The last and most extreme of 70mph crumple zone will drop the engine'
-                   'V8 OR V12 out the bottom oushing the car up and over engine to'
-                   'decrease imapact to cockpit'
+        'question': 'What is the Aston Martin logo:',
+        'answers': ['Butterfly', 'Arrow', 'Wings'],
+        'correct': 'Wings'
     },
     {
         'question': 'In the vanquish there is a option to have a square steering wheel:',
@@ -42,7 +36,7 @@ aston_questions = [
         'answers': ['Vantage',
                     'DB11',
                     'Cygnet'],
-        'correct': 'Cygent'
+        'correct': 'Cygnet'
     },
     {
         'question': 'There are currently 2 new engines which are AMG based what are these:',

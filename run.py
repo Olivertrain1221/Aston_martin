@@ -142,7 +142,6 @@ def question_amount_selection():
         except Exception:
             print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
 15 ''')
-            question_amount_selection_loop()
 
 
 
@@ -202,7 +201,6 @@ def user_gameplay_input(correct_answer):
                 raise Exception
             else:
                 checks_user_to_correct(users_choice, correct_answer)
-                print("Got to users choice Else end")
         except Exception:
             print("You didnt obviously read any of my hard work its 1 2 or 3 !!!!!")
 
@@ -213,8 +211,23 @@ def checks_user_to_correct(users_choice, correct_answer):
     """
     if users_choice == correct_answer:
         print("THATS CORRECT!!!")
+        right_answer()
     else:
+        wrong_answer()
         print("your wrong...... unlucky")
+
+point = 0
+
+def right_answer():
+    """
+    adds a point to global variable
+    """
+    point += 1
+    print(f"Thats correct well done you now have {point}")
+
+
+def wrong_answer():
+    print("Unlucky but that was wrong try again what for the lives though!!!")
 
 
 startup()
