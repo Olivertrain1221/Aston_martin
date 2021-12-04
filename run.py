@@ -144,7 +144,6 @@ def question_amount_selection():
 15 ''')
 
 
-
 def generate_random_question(question_selection):
     """
     Generates a random question by getting it from question_selections
@@ -166,14 +165,18 @@ def display_questions(game_questions, question_selection):
     Gets the random questions generated and then displays
     """
     i = 0
+    points = 0
     while i < question_selection:
         print(game_questions[i]["question"])
         print(f"1 - {game_questions[i]['answers'][0]} 2 - {game_questions[i]['answers'][1]} 3- {game_questions[i]['answers'][2]}")
         print()
         correct_answer = generate_correct_answer(game_questions[i])
         i = i + 1
-        user_gameplay_input(correct_answer)
-
+        users_choice = user_gameplay_input()
+        if checks_user_to_correct(users_choice, correct_answer):
+            point += 1
+            print()
+        
 
 def generate_correct_answer(game_questions):
     """
@@ -187,7 +190,7 @@ def generate_correct_answer(game_questions):
         return 3
 
 
-def user_gameplay_input(correct_answer):
+def user_gameplay_input():
     """
     Users game play input
     """
@@ -200,7 +203,7 @@ def user_gameplay_input(correct_answer):
             if users_choice not in [1, 2, 3]:
                 raise Exception
             else:
-                checks_user_to_correct(users_choice, correct_answer)
+                return users_choice
         except Exception:
             print("You didnt obviously read any of my hard work its 1 2 or 3 !!!!!")
 
@@ -210,23 +213,22 @@ def checks_user_to_correct(users_choice, correct_answer):
     Will compare users input to correct answer to verify
     """
     if users_choice == correct_answer:
-        print("THATS CORRECT!!!")
-        right_answer()
+        return True
     else:
-        wrong_answer()
-        print("your wrong...... unlucky")
+        return False
 
-point = 0
 
 def right_answer():
     """
     adds a point to global variable
     """
-    point += 1
-    print(f"Thats correct well done you now have {point}")
+    print(f"Thats correct well done you now have {POINT} point!")
 
 
 def wrong_answer():
+    """
+    Generates wrong answer message
+    """
     print("Unlucky but that was wrong try again what for the lives though!!!")
 
 
