@@ -116,6 +116,14 @@ answers will need to be inputted but using the numbers on your keyboard
         rule_options()
 
 
+def add_too_leaderboard():
+    """
+    This will add all users scores to excel sheet
+    """
+    users_score == int(point)
+    
+
+
 def question_amount_selection():
     """
     Allows the user to select amount of questions
@@ -175,8 +183,8 @@ def display_questions(game_questions, question_selection):
         users_choice = user_gameplay_input()
         if checks_user_to_correct(users_choice, correct_answer):
             point += 1
-            print()
-        
+            print(point)
+  
 
 def generate_correct_answer(game_questions):
     """
