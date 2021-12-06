@@ -12,6 +12,7 @@ from os import system, name
 import time
 
 
+
 def clear():
     """
     Adds the clear terminal function
