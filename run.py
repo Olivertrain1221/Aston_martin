@@ -1,8 +1,6 @@
-# Add user input into it next and to display
-# validate the users input as to what the correct answeris
-# then call a win/ lose func dependant on result (if)
-# add counter into the game lives
-#
+# Think about feed back
+# Testing
+# Add the ability to
 
 
 from questions import aston_questions
@@ -10,23 +8,30 @@ import random
 import os
 from os import system, name
 import time
-import gspread
-from google.oauth.service_account import Credentials
+# # import gspread
+# from google.oauth.service_account import Credentials
 
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
+# SCOPE = [
+#     "https://www.googleapis.com/auth/spreadsheets",
+#     "https://www.googleapis.com/auth/drive.file",
+#     "https://www.googleapis.com/auth/drive"
+#     ]
 
-# Accesses the excel sheet itself
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
+# # Accesses the excel sheet itself
+# CREDS = Credentials.from_service_account_file('creds.json')
+# SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+# GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+# SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
 
-# Identifies the actual sheet in the excel
-score_sheet = SHEET.worksheet('scoreboard')
+# # Identifies the actual sheet in the excel
+# score_sheet = SHEET.worksheet('scoreboard')
+
+def add_to_leaderboard():
+    """
+    This will add all users scores to excel sheet
+    """
+    # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
+    # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
 
 
 
@@ -102,7 +107,7 @@ def gets_username():
     """
     clear()
     print("Good choice on playing, but first lets get your name!")
-    users_name = input("")
+    users_name = str(input(""))
     clear()
     time.sleep(1.5)
     print(f"Excellent thankyou for entering your name: {users_name}")
@@ -134,13 +139,6 @@ answers will need to be inputted but using the numbers on your keyboard
         rule_options()
 
 
-def add_to_leaderboard():
-    """
-    This will add all users scores to excel sheet
-    """
-    users_score == int(point) ##
-
-
 def update_sales_worksheet(data):
     """
     Update sales worksheet, add new row with the list data provided
@@ -149,9 +147,6 @@ def update_sales_worksheet(data):
     sales_worksheet = SHEET.worksheet("sales")
     sales_worksheet.append_row(data)
     print("Sales worksheet updated successfully.\n")
-
-
-    
 
 
 def question_amount_selection():
