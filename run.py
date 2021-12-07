@@ -134,11 +134,21 @@ answers will need to be inputted but using the numbers on your keyboard
         rule_options()
 
 
-def add_too_leaderboard():
+def add_to_leaderboard():
     """
     This will add all users scores to excel sheet
     """
     users_score == int(point) ##
+
+
+def update_sales_worksheet(data):
+    """
+    Update sales worksheet, add new row with the list data provided
+    """
+    print("Updating sales worksheet...\n")
+    sales_worksheet = SHEET.worksheet("sales")
+    sales_worksheet.append_row(data)
+    print("Sales worksheet updated successfully.\n")
 
 
     
@@ -206,8 +216,8 @@ def display_questions(game_questions, question_selection):
         else:
             print("Thats incorrect im afraid oh well onto the next question")
         i = i + 1
-    add_too_leaderboard()
-    
+    add_to_leaderboard()
+
 
 def generate_correct_answer(game_questions):
     """

@@ -1,6 +1,6 @@
 aston_questions = [
     {
-        'question': 'What is the biggest naturally aspirated engine the Aston Martin sell?:',
+        'question': 'What is the biggest naturally aspirated engine that Aston Martin sell?:',
         'answers': ['V8', 'V12', '1.8'],
         'correct': 'V12'
     },
@@ -10,7 +10,7 @@ aston_questions = [
         'correct': 'Q'
     },
     {
-        'question': 'The most iconic Aston Martin is:',
+        'question': 'The most iconic Aston Martin and James Bond car is:',
         'answers': ['Vantage', 'DB9', 'DB5'],
         'correct': 'DB5'
     },
@@ -20,7 +20,7 @@ aston_questions = [
         'correct': 'Wings'
     },
     {
-        'question': 'In the vanquish there is a option to change the steering wheel shape to:',
+        'question': 'In the Vanquish there is a option to change the steering wheel shape to:',
         'answers': ['Octagon', 'Square', 'Circle'],
         'correct': 'Square'
     },
@@ -47,13 +47,13 @@ aston_questions = [
     },
     {
         'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
-        'answers': ['3.4 715',
-                    '4.4 550',
-                    '3.8 650'],
-        'correct': '3.4 715'
+        'answers': ['3.4 ftlb 715 bhp',
+                    '4.4 ftlb 550 bhp',
+                    '3.8 ftlb 650 bhp'],
+        'correct': '3.4 ftlb 715 bhp'
     },
     {
-        'question': 'What gearbox is in the AMR Vantage V12?:',
+        'question': 'What manual gearbox is in the AMR Vantage V12?:',
         'answers': ['6 speed manual',
                     '8 speed automatic',
                     'Dog leg 7 speed manual'],
@@ -67,7 +67,7 @@ aston_questions = [
         'correct': '51:49'
     },
     {
-        'question': 'What is car used in the film Casino royale:',
+        'question': 'What is the car used in the film Casino royale that rolls:',
         'answers': ['Vantage',
                     'DB9',
                     'DBS'],
@@ -76,7 +76,7 @@ aston_questions = [
     {
         'question': 'What make do aston martin use for brake callipers:',
         'answers': ['Pagid',
-                    'Stopmeo',
+                    'Stopmeos',
                     'Brembo'],
         'correct': 'Brembo'
     },
@@ -109,21 +109,21 @@ aston_questions = [
         'correct': 'Milbrook'
     },
     {
-        'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
-        'answers': ['3.4 715',
-                    '4.4 550',
-                    '3.8 650'],
-        'correct': '3.4 715'
+        'question': 'When was the first Aston Martin ever made:',
+        'answers': ['1913',
+                    '1932',
+                    '1925'],
+        'correct': '1913'
     },
     {
         'question': 'In James Bond the big red button under the gear lever was to do what?:',
         'answers': ['Super speed',
                     'Fire the rockets',
                     'Ejector Seat'],
-        'correct': 'V12'
+        'correct': 'Ejector Seat'
     },
     {
-        'question': 'The family V12 aston martin is called what?:',
+        'question': 'The family V12 Aston Martin is called what?:',
         'answers': ['Vantage',
                     'Valkerie',
                     'Rapide'],
@@ -158,7 +158,7 @@ aston_questions = [
         'correct': 'Secret Pen'
     },
     {
-        'question': 'Most common Fault with AM DB9 and V8 Vantage:',
+        'question': 'Most common Fault with the DB9 and V8 Vantage:',
         'answers': ['Corroded over axel rear brake pipe',
                     'Blown up engine',
                     'Electronic steering fault'],
