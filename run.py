@@ -10,6 +10,23 @@ import random
 import os
 from os import system, name
 import time
+# import gspread
+# from google.oauth.service_account import Credentials
+
+# SCOPE = [
+#     "https://www.googleapis.com/auth/spreadsheets",
+#     "https://www.googleapis.com/auth/drive.file",
+#     "https://www.googleapis.com/auth/drive"
+#     ]
+
+# # Accesses the excel sheet itself
+# CREDS = Credentials.from_service_account_file('creds.json')
+# SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+# GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+# SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
+
+# # Identifies the actual sheet in the excel
+# score_sheet = SHEET.worksheet('scoreboard')
 
 
 
@@ -117,11 +134,12 @@ answers will need to be inputted but using the numbers on your keyboard
         rule_options()
 
 
-def add_too_leaderboard():
-    """
-    This will add all users scores to excel sheet
-    """
-    users_score == int(point)
+# def add_too_leaderboard():
+#     """
+#     This will add all users scores to excel sheet
+#     """
+#     users_score == int(point) ##
+
     
 
 
@@ -174,18 +192,21 @@ def display_questions(game_questions, question_selection):
     Gets the random questions generated and then displays
     """
     i = 0
-    points = 0
+    point = 0
     while i < question_selection:
         print(game_questions[i]["question"])
         print(f"1 - {game_questions[i]['answers'][0]} 2 - {game_questions[i]['answers'][1]} 3- {game_questions[i]['answers'][2]}")
         print()
         correct_answer = generate_correct_answer(game_questions[i])
-        i = i + 1
         users_choice = user_gameplay_input()
-        if checks_user_to_correct(users_choice, correct_answer):
+        if users_choice == correct_answer:
             point += 1
+            print("point added")
             print(point)
-  
+        else:
+            print("Thats incorrect")
+        i = i + 1
+        
 
 def generate_correct_answer(game_questions):
     """
@@ -215,30 +236,6 @@ def user_gameplay_input():
                 return users_choice
         except Exception:
             print("You didnt obviously read any of my hard work its 1 2 or 3 !!!!!")
-
-
-def checks_user_to_correct(users_choice, correct_answer):
-    """
-    Will compare users input to correct answer to verify
-    """
-    if users_choice == correct_answer:
-        return True
-    else:
-        return False
-
-
-def right_answer():
-    """
-    adds a point to global variable
-    """
-    print(f"Thats correct well done you now have {POINT} point!")
-
-
-def wrong_answer():
-    """
-    Generates wrong answer message
-    """
-    print("Unlucky but that was wrong try again what for the lives though!!!")
 
 
 startup()

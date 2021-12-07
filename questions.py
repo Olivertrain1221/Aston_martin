@@ -20,9 +20,9 @@ aston_questions = [
         'correct': 'Wings'
     },
     {
-        'question': 'In the vanquish there is a option to have a square steering wheel:',
-        'answers': ['True', 'False'],
-        'correct': 'True'
+        'question': 'In the vanquish there is a option to change the steering wheel shape to:',
+        'answers': ['Octagon', 'Square', 'Circle'],
+        'correct': 'Square'
     },
     {
         'question': 'What is Aston Martins new SUV:',
@@ -39,11 +39,11 @@ aston_questions = [
         'correct': 'Cygnet'
     },
     {
-        'question': 'There are currently 2 new engines which are AMG based what are these:',
+        'question': 'Which one of these AMG engines is NOT currently being used int the brands cars:',
         'answers': ['V6 twin turbo',
                     'V8 twin turbo',
                     'V12 twin turbo'],
-        'correct': 'V12 twin turbo'
+        'correct': 'V6 twin turbo'
     },
     {
         'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
@@ -83,7 +83,8 @@ aston_questions = [
     {
         'question': 'What does GT stand for in the model DB11:',
         'answers': ['Great toruqe',
-                    'Grand Tourer'],
+                    'Grand Tourer',
+                    'Great Terrain'],
         'correct': 'Grand Tourer'
     },
     {
@@ -94,16 +95,18 @@ aston_questions = [
         'correct': 'The car was only originaly designed to take a V8'
     },
     {
-        'question': 'Aston Martin as a business is now floating on the stock market:',
-        'answers': ['True',
-                    'False'],
-        'correct': 'True'
+        'question': 'Aston Martins headquarters is located where',
+        'answers': ['Gaydon, England',
+                    'Aberdeen, Scotland',
+                    'London, England'],
+        'correct': 'Gaydon, England'
     },
     {
-        'question': 'There is currently 2 new engines which are AMG based what are these:',
-        'answers': ['V6 twin turbo, v8 twin turbo',
-                    'V8 twin turbo, V12 twin turbo'],
-        'correct': 'V12 twin turbo'
+        'question': 'Astons Training track is',
+        'answers': ['Milbrook',
+                    'Brands Hatch',
+                    'Spa'],
+        'correct': 'Milbrook'
     },
     {
         'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
@@ -141,37 +144,38 @@ aston_questions = [
         'correct': 'V8 Twin Super Charge'
     },
     {
-        'question': '+:',
-        'answers': ['True',
-                    'False'],
-        'correct': 'True'
+        'question': 'When the DBS Superleggera was lauched with Tag Haeur what gift did you get with the car?',
+        'answers': ['Washing Machine',
+                    'Embroided lighter',
+                    'Limited edition Watch'],
+        'correct': 'Limited edition Watch'
     },
     {
-        'question': 'What is Aston Martins new SUV:',
-        'answers': ['Vantage',
-                    'DB11',
-                    'DBX'],
-        'correct': 'DBX'
+        'question': 'In the MK1 Vanquish what was hidden in the glove box:',
+        'answers': ['Secret Map',
+                    'Secret Pen',
+                    'Secret Gun'],
+        'correct': 'Secret Pen'
     },
     {
-        'question': 'What Is the smallest car aston martin have ever made:',
-        'answers': ['Vantage',
-                    'DB11',
-                    'Cygnet'],
-        'correct': 'Cygent'
+        'question': 'Most common Fault with AM DB9 and V8 Vantage:',
+        'answers': ['Corroded over axel rear brake pipe',
+                    'Blown up engine',
+                    'Electronic steering fault'],
+        'correct': 'Corroded over axel rear brake pipe'
     },
     {
-        'question': 'There is currently 2 new engines which are AMG based what are these:',
-        'answers': ['V6 twin turbo',
-                    'V8 twin turbo',
-                    'V12 twin turbo'],
-        'correct': 'V12 twin turbo'
+        'question': 'The oil grade used in the V8 is',
+        'answers': ['10W 60',
+                    '5w 40',
+                    '0w 40'],
+        'correct': '10W 60'
     },
     {
-        'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
-        'answers': ['3.4 715',
-                    '4.4 550',
-                    '3.8 650'],
-        'correct': '3.4 715'
+        'question': 'The DBS Superleggera has a entry price tag of?',
+        'answers': ['225,000',
+                    '335,000',
+                    '300,000'],
+        'correct': '225,000'
     }
 ]
