@@ -10,23 +10,23 @@ import random
 import os
 from os import system, name
 import time
-# import gspread
-# from google.oauth.service_account import Credentials
+import gspread
+from google.oauth.service_account import Credentials
 
-# SCOPE = [
-#     "https://www.googleapis.com/auth/spreadsheets",
-#     "https://www.googleapis.com/auth/drive.file",
-#     "https://www.googleapis.com/auth/drive"
-#     ]
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
 
-# # Accesses the excel sheet itself
-# CREDS = Credentials.from_service_account_file('creds.json')
-# SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-# GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-# SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
+# Accesses the excel sheet itself
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
 
-# # Identifies the actual sheet in the excel
-# score_sheet = SHEET.worksheet('scoreboard')
+# Identifies the actual sheet in the excel
+score_sheet = SHEET.worksheet('scoreboard')
 
 
 
@@ -134,11 +134,12 @@ answers will need to be inputted but using the numbers on your keyboard
         rule_options()
 
 
-# def add_too_leaderboard():
-#     """
-#     This will add all users scores to excel sheet
-#     """
-#     users_score == int(point) ##
+def add_too_leaderboard():
+    """
+    This will add all users scores to excel sheet
+    """
+    users_score == int(point) ##
+
 
     
 
@@ -201,12 +202,12 @@ def display_questions(game_questions, question_selection):
         users_choice = user_gameplay_input()
         if users_choice == correct_answer:
             point += 1
-            print("point added")
-            print(point)
+            print(f"Thats correct well done you now have {point} point!")
         else:
-            print("Thats incorrect")
+            print("Thats incorrect im afraid oh well onto the next question")
         i = i + 1
-        
+    add_too_leaderboard()
+    
 
 def generate_correct_answer(game_questions):
     """

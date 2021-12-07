@@ -39,7 +39,7 @@ aston_questions = [
         'correct': 'Cygnet'
     },
     {
-        'question': 'Which one of these AMG engines is NOT currently being used int the brands cars:',
+        'question': 'Which one of these AMG engines is NOT currently being used in the brands cars:',
         'answers': ['V6 twin turbo',
                     'V8 twin turbo',
                     'V12 twin turbo'],
