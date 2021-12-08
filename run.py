@@ -8,7 +8,7 @@ import os
 from os import system, name
 import time
 import gspread
-from google.oauth.service_account import Credentials
+from google.oauth2.service_account import Credentials
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -203,7 +203,7 @@ def display_questions(game_questions, question_selection):
         else:
             print("Thats incorrect im afraid oh well onto the next question")
         i = i + 1
-    add_to_leaderboard()
+    # add_to_leaderboard()
 
 
 def generate_correct_answer(game_questions):
