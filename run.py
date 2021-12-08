@@ -2,38 +2,40 @@
 # Testing
 # Add the ability to
 
-
 from questions import aston_questions
 import random
 import os
 from os import system, name
 import time
-# # import gspread
-# from google.oauth.service_account import Credentials
+import gspread
+from google.oauth.service_account import Credentials
 
-# SCOPE = [
-#     "https://www.googleapis.com/auth/spreadsheets",
-#     "https://www.googleapis.com/auth/drive.file",
-#     "https://www.googleapis.com/auth/drive"
-#     ]
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
 
-# # Accesses the excel sheet itself
-# CREDS = Credentials.from_service_account_file('creds.json')
-# SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-# GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-# SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
+# Accesses the excel sheet itself
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
 
-# # Identifies the actual sheet in the excel
-# score_sheet = SHEET.worksheet('scoreboard')
+# Identifies the actual sheet in the excel
+score_sheet = SHEET.worksheet('scoreboard')
 
-def add_to_leaderboard():
+def add_to_leaderboard(users_name, point):
     """
     This will add all users scores to excel sheet
     """
     # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
     # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
-
-
+    print("got to start of add leaderboard func")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(users_name, point)
+    print("got to end of add to leader board func, should of added")
+    
 
 def clear():
     """
@@ -137,16 +139,6 @@ answers will need to be inputted but using the numbers on your keyboard
     except Exception:
         print(" DERRRRR try 'M'")
         rule_options()
-
-
-def update_sales_worksheet(data):
-    """
-    Update sales worksheet, add new row with the list data provided
-    """
-    print("Updating sales worksheet...\n")
-    sales_worksheet = SHEET.worksheet("sales")
-    sales_worksheet.append_row(data)
-    print("Sales worksheet updated successfully.\n")
 
 
 def question_amount_selection():
