@@ -80,8 +80,8 @@ def add_to_leaderboard(users_name, point):
     # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
     # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
     print("got to start of add leaderboard func")
-    worksheet_to_update = SHEET.worksheet(worksheet)
-    worksheet_to_update.append_row(users_name, point)
+    score_sheet = SHEET.worksheet(worksheet)
+    score_sheet.append_row(users_name, point)
     print("got to end of add to leader board func, should of added")
 
 
