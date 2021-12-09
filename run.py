@@ -23,9 +23,6 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
 
-# Identifies the actual sheet in the excel
-score_sheet = SHEET.worksheet('scoreboard')
-
 
 def clear():
     """
@@ -80,8 +77,8 @@ def add_to_leaderboard(users_name, point):
     # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
     # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
     print("got to start of add leaderboard func")
-    score_sheet = SHEET.worksheet(worksheet)
-    score_sheet.append_row(users_name, point)
+    score_sheet = SHEET.worksheet('scoreboard')
+    score_sheet.append_row(users_name[0], point[1])
     print("got to end of add to leader board func, should of added")
 
 
