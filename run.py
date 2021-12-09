@@ -1,6 +1,7 @@
 # Think about feed back
 # Testing
 # Add the ability to
+# Need to add validation to stop inputing a empty string...
 
 from questions import aston_questions
 import random
@@ -25,17 +26,6 @@ SHEET = GSPREAD_CLIENT.open('aston_quiz_score')
 # Identifies the actual sheet in the excel
 score_sheet = SHEET.worksheet('scoreboard')
 
-def add_to_leaderboard(users_name, point):
-    """
-    This will add all users scores to excel sheet
-    """
-    # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
-    # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
-    print("got to start of add leaderboard func")
-    worksheet_to_update = SHEET.worksheet(worksheet)
-    worksheet_to_update.append_row(users_name, point)
-    print("got to end of add to leader board func, should of added")
-    
 
 def clear():
     """
@@ -75,6 +65,25 @@ def user_main_menu():
     Type 'P' for play, 'R' for rules or 'Q' for quit.""")
     main_menu_selection()
 
+def main_game_loop():
+    users_name = gets_username()
+    question_selection = question_amount_selection()
+    game_questions = generate_random_question(question_selection)
+    point = display_questions(game_questions, question_selection)
+    add_to_leaderboard(users_name, point)
+    startup()
+
+def add_to_leaderboard(users_name, point):
+    """
+    This will add all users scores to excel sheet
+    """
+    # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
+    # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
+    print("got to start of add leaderboard func")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(users_name, point)
+    print("got to end of add to leader board func, should of added")
+
 
 def main_menu_selection():
     """
@@ -88,7 +97,7 @@ def main_menu_selection():
                 raise Exception
             else:
                 if option == 'P':
-                    gets_username()
+                    main_game_loop()
                     break
                 elif option == 'R':
                     rule_options()
@@ -114,8 +123,7 @@ def gets_username():
     time.sleep(1.5)
     print(f"Excellent thankyou for entering your name: {users_name}")
     time.sleep(1)
-    question_amount_selection()
-
+    
 
 def rule_options():
     """
@@ -153,17 +161,7 @@ def question_amount_selection():
             if question_selection not in [5, 10, 15]:
                 raise Exception
             else:
-                if question_selection == 5:
-                    generate_random_question(question_selection)
-                    break
-                elif question_selection == 10:
-                    # function for 10 q
-                    generate_random_question(question_selection)
-                    break
-                elif question_selection == 15:
-                    # function for 15 q
-                    generate_random_question(question_selection)
-                    break
+                return question_selection
         except Exception:
             print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
 15 ''')
@@ -181,8 +179,7 @@ def generate_random_question(question_selection):
         if x not in previous_number:
             previous_number.append(x)
             game_questions.append(aston_questions[x])
-
-    display_questions(game_questions, question_selection)
+    return game_questions
 
 
 def display_questions(game_questions, question_selection):
@@ -203,7 +200,8 @@ def display_questions(game_questions, question_selection):
         else:
             print("Thats incorrect im afraid oh well onto the next question")
         i = i + 1
-    # add_to_leaderboard()
+    
+    return point
 
 
 def generate_correct_answer(game_questions):
