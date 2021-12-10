@@ -7,7 +7,7 @@
 from questions import aston_questions
 import random
 import os
-from os import system, name
+# from os import system, name
 import time
 import gspread
 from google.oauth2.service_account import Credentials
@@ -63,24 +63,32 @@ def user_main_menu():
     Type 'P' for play, 'R' for rules or 'Q' for quit.""")
     main_menu_selection()
 
+
 def main_game_loop():
     users_name = gets_username()
     question_selection = question_amount_selection()
     game_questions = generate_random_question(question_selection)
     point = display_questions(game_questions, question_selection)
-    add_to_leaderboard(users_name, point)
-    startup()
+    add_to_leaderboard(users_name, point, question_selection)
+    # startup()
 
 
-def add_to_leaderboard(users_name, point):
+def add_to_leaderboard(users_name, point, question_selection):
     """
     This will add all users scores to excel sheet
     """
     # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
     # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
     print("got to start of add leaderboard func")
-    score_sheet = SHEET.worksheet('scoreboard')
-    score_sheet.append_row(users_name, point)
+    if question_selection == 5:
+        score_sheet_five = SHEET.worksheet('scoreboard-5')
+        score_sheet_five.append_row([users_name, point])
+    elif question_selection == 10:
+        score_sheet_ten = SHEET.worksheet('scoreboard-10')
+        score_sheet_ten.append_row([users_name, point])
+    elif question_selection == 15:
+        score_sheet_fifteen = SHEET.worksheet('scoreboard-15')
+        score_sheet_fifteen.append_row([users_name, point])
     print("got to end of add to leader board func, should of added")
 
 
@@ -122,7 +130,8 @@ def gets_username():
     time.sleep(1.5)
     print(f"Excellent thankyou for entering your name: {users_name}")
     time.sleep(1)
-    
+    return users_name
+
 
 def rule_options():
     """
@@ -199,7 +208,7 @@ def display_questions(game_questions, question_selection):
         else:
             print("Thats incorrect im afraid oh well onto the next question")
         i = i + 1
-    
+
     return point
 
 
