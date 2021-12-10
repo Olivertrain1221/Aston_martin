@@ -59,6 +59,7 @@ def user_main_menu():
     print("""
     -          Play           -
     -          Rules          -
+    -       LeaderBoard       -
     -          Quit           -
     Type 'P' for play, 'R' for rules or 'Q' for quit.""")
     main_menu_selection()
@@ -92,6 +93,19 @@ def add_to_leaderboard(users_name, point, question_selection):
     print("got to end of add to leader board func, should of added")
 
 
+def leaderboard():
+    print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
+    print()
+    print()
+    print(" " * 32 + "_" * 7 + " " * 34)
+    print(" " * 32 + "|" + " " * 5 + "|" + " " * 34)
+    print(" " * 32 + "|" + " " * 5 + "|" + " " * 34)
+    print(" " * 32 + "|" + " " * 5 + "|" + " " * 34)
+    print(" " * 25 + "_" * 7 + "/" + " " * 5 + "|" + " " * 34)
+    print(" " * 25 + "|" + " " * 12 + "\_______" + " " * 34)
+    print(" " * 25 + "|" + " " * 20 + "|" + " " * 34)
+
+
 def main_menu_selection():
     """
     Checking what the user inputs and validates,
@@ -100,7 +114,7 @@ def main_menu_selection():
         while True:
             option = input("")
             option = option.upper()
-            if option not in ["P", "R", "Q"]:
+            if option not in ["P", "R", "L", "Q"]:
                 raise Exception
             else:
                 if option == 'P':
@@ -111,6 +125,9 @@ def main_menu_selection():
                     break
                 elif option == 'Q':
                     startup()
+                    break
+                elif option == 'L':
+                    leaderboard()
                     break
     except Exception:
         print('''Hmmm you didnt follow the rules!!! You entered please try
@@ -151,7 +168,7 @@ answers will need to be inputted but using the numbers on your keyboard
             if return_to_menu not in ["M"]:
                 raise Exception
             else:
-                main()
+                startup()
     except Exception:
         print(" DERRRRR try 'M'")
         rule_options()
@@ -198,7 +215,9 @@ def display_questions(game_questions, question_selection):
     point = 0
     while i < question_selection:
         print(game_questions[i]["question"])
-        print(f"1 - {game_questions[i]['answers'][0]} 2 - {game_questions[i]['answers'][1]} 3- {game_questions[i]['answers'][2]}")
+        print(f"1 - {game_questions[i]['answers'][0]}")
+        print(f"2 - {game_questions[i]['answers'][1]}")
+        print(f"3- {game_questions[i]['answers'][2]}")
         print()
         correct_answer = generate_correct_answer(game_questions[i])
         users_choice = user_gameplay_input()
@@ -239,7 +258,7 @@ def user_gameplay_input():
             else:
                 return users_choice
         except Exception:
-            print("You didnt obviously read any of my hard work its 1 2 or 3 !!!!!")
+            print("You didnt obviously read any of my hard work its 1 2 or 3!")
 
 
 startup()
