@@ -1,6 +1,7 @@
-# Think about feed back
-# Testing
-# Add the ability to
+# DO TESTING FORM EXCEL MATT SENT
+# READ ME
+# WHERE AM I GOING TO USE THE CLEAR FUNCTION
+# COLOR OF BACK GROUND
 # Need to add validation to stop inputing a empty string...
 
 from questions import aston_questions
@@ -70,6 +71,7 @@ def main_game_loop():
     add_to_leaderboard(users_name, point)
     startup()
 
+
 def add_to_leaderboard(users_name, point):
     """
     This will add all users scores to excel sheet
@@ -78,7 +80,7 @@ def add_to_leaderboard(users_name, point):
     # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
     print("got to start of add leaderboard func")
     score_sheet = SHEET.worksheet('scoreboard')
-    score_sheet.append_row(users_name[0], point[1])
+    score_sheet.append_row(users_name, point)
     print("got to end of add to leader board func, should of added")
 
 
