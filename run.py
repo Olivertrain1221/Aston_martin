@@ -97,26 +97,38 @@ def leaderboard():
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print()
-    print(" " * 32 + "_" * 8 + " " * 34)
+    print(" " * 32 + "_" * 9 + " " * 34)
     # print(" " * 32 + "|" + " " * 5 + "|" + " " * 34)
     # print(" " * 32 + "|" + " " * 5 + "|" + " " * 34) TEMP SEE TOP IN RUNNING
-    print(" " * 31 + "|" + " " * 7 + "|" + " " * 34)
-    print(" " * 31 + "|" + " " * 7 + "|" + " " * 34)
-    print(" " * 24 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6)
-    print(" " * 23 + "|" + " " * 23 + "|")
-    print(" " * 23 + "|" + " " * 23 + "|")
-    print(" " * 23 + "|" + "_" * 23 + "|")
+    print(" " * 31 + "|" + " " * 3 + "1ST" +" " * 3 + "|" + " " * 34)
+    print(" " * 31 + "|" + " " * 9 + "|" + " " * 34)
+    print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
+    print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
+    print(" " * 24 + "|" + " " * 24 + "|")
+    print(" " * 24 + "|" + "_" * 24 + "|")
     # print(" " * 25 + "|" + " " * 20 + "|" + " " * 34) # EDITING
     print()
     print() # Users name
     print() # Users point
-    print(" " * 9 + "_" * 8 + " " * 37 + "_" * 8 + " " * 8)
-    print(" " * 8 + "|" + " " * 8 + "|" + " " * 35 + "|" + " " * 8 + "|" + " " * 8)
-    print(" " * 8 + "|" + " " * 8 + "|" + " " * 35 + "|" + " " * 8 + "|" + " " * 8)
-    print(" " * 2 + "_" * 6 + "/" + " " * 8 + "\\" + "_" * 6 + " " * 23 + "_" * 6 + "/" + " " * 8 + "\\" + "_" * 7)
-    print(" " * 2 + "|"  + " " * 21 + "|" + " " * 21 + "|" + " " * 23 + "|")
-    print(" " * 2 + "|"  + " " * 21 + "|" + " " * 21 + "|" + " " * 23 + "|")
-    print(" " * 2 + "|"  + " " * 21 + "|" + " " * 21 + "|" + " " * 23 + "|")
+    print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
+    print(" " * 8 + "|" + " " * 3 + "1ST" +" " * 3 + "|" + " " * 36 + "|"+ " " * 3 + "1ST" +" " * 3 + "|" + " " * 8)
+    print(" " * 8 + "|" + " " * 9 + "|" + " " * 36 + "|" + " " * 9 + "|" + " " * 8)
+    print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 + "_" * 7 + "/" + " " * 10 + "\\" + "_" * 7)
+    print(" " * 1 + "|" + " " + "2ND" + " " * 16 + "3RD" + "|" + " " * 21 + "|" + " " + "2ND" + " " * 19 + "3RD" + "|")
+    print(" " * 1 + "|" + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
+    print(" " * 1 + "|"  + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
+    print('''Press M for menu to return''')
+    try:
+        while True:
+            return_to_menu = input("")
+            return_to_menu = return_to_menu.upper()
+            if return_to_menu not in ["M"]:
+                raise Exception
+            else:
+                startup()
+    except Exception:
+        print(" DERRRRR try 'M'")
+        rule_options()
 
 
 def main_menu_selection():
@@ -154,13 +166,21 @@ def gets_username():
     Gets the users name
     """
     clear()
-    print("Good choice on playing, but first lets get your name!")
-    users_name = str(input(""))
-    clear()
-    time.sleep(1.5)
-    print(f"Excellent thankyou for entering your name: {users_name}")
-    time.sleep(1)
-    return users_name
+    print("Good choice on playing, but first lets get the intials to your name!")
+    try:
+        while True:
+            users_name = str(input(""))
+            if len(users_name) >= 2:
+                raise Exception
+            else:
+                clear()
+                time.sleep(1.5)
+                print(f"Excellent thankyou for entering your name: {users_name}")
+                time.sleep(1)
+                return users_name
+    except Exception:
+        print("Just your initials Wakey wakey")
+        gets_username()
 
 
 def rule_options():
