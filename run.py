@@ -1,12 +1,13 @@
 # DO TESTING FORM EXCEL MATT SENT
 # ASK TIM ABOUT GETTING FROM EXCEL SHEET and how to add the names and the user points
-# 
+# pep 8 validation pep8online.com.
+
 # READ ME
 # WHERE AM I GOING TO USE THE CLEAR FUNCTION
 # COLOR OF BACK GROUND
 # Need to add validation to stop inputing a empty string...
 # Need to also ensure it only takes in letters
-#need it to get all info in the file in for five 10 15 and then work out heighest and
+# need it to get all info in the file in for five 10 15 and then work out heighest and
 
 
 from questions import aston_questions
@@ -98,6 +99,25 @@ def add_to_leaderboard(users_name, point, question_selection):
     print("got to end of add to leader board func, should of added")
 
 
+def get_scoresheet_five():
+    """
+    Gets the values in scoresheet 5
+    """
+    worksheet_list_five = SHEET.get_worksheet(0)
+    worksheet_values = worksheet_list_five.get_all_values()
+    print(worksheet_values)
+    score_five = worksheet_values
+    l = len(score_five)
+    for i in range(0, l):
+        for j in range(0, l-i-1):
+            if (score_five[j][1] > score_five[j + 1][1]):
+                tempo = score_five[j]
+                score_five[j] = score_five[j + 1]
+                score_five[j + 1] = tempo
+    print(score_five)
+    return score_five
+
+
 def leaderboard():
     """
     Gets the leaderboard on screen and prints top players from excel
@@ -105,8 +125,10 @@ def leaderboard():
     # first_best_of_five = SHEET.worksheet('scoreboard-5')
     # retrieve all data from score  5, and put them all into a list/dict
     # sort the list/dict via point column values (highest to lowest), MAYBE SORT -1 if ypu get stuck (-1 usualy reverse)
-    # grab 0 -1 2 index and display where i want. 
-    # second_best_of_five = 
+    # grab 0 -1 2 index and display where i want.
+    # # worksheet_five = sh.
+    get_scoresheet_five()
+    # best_of_five = worksheet.row_values(1)
     # thrid_best_of_five = 
     # first_best_of_ten = 
     # second_best_of_ten = 
@@ -120,7 +142,7 @@ def leaderboard():
     print(" " * 32 + "_" * 9 + " " * 34)
     # print(" " * 32 + "|" + " " * 5 + "|" + " " * 34)
     # print(" " * 32 + "|" + " " * 5 + "|" + " " * 34) TEMP SEE TOP IN RUNNING
-    print(" " * 31 + "|" + " " * 3 + "1ST" +" " * 3 + "|" + " " * 34)
+    print(" " * 31 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 34)
     print(" " * 31 + "|" + " " * 9 + "|" + " " * 34)
     print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
     print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
@@ -128,15 +150,15 @@ def leaderboard():
     print(" " * 24 + "|" + "_" * 24 + "|")
     # print(" " * 25 + "|" + " " * 20 + "|" + " " * 34) # EDITING
     print()
-    print() # Users name
-    print() # Users point
+    print()  # Users name
+    print()  # Users point
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
-    print(" " * 8 + "|" + " " * 3 + "1ST" +" " * 3 + "|" + " " * 36 + "|"+ " " * 3 + "1ST" +" " * 3 + "|" + " " * 8)
+    print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
     print(" " * 8 + "|" + " " * 9 + "|" + " " * 36 + "|" + " " * 9 + "|" + " " * 8)
     print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 + "_" * 7 + "/" + " " * 10 + "\\" + "_" * 7)
     print(" " * 1 + "|" + " " + "2ND" + " " * 16 + "3RD" + "|" + " " * 21 + "|" + " " + "2ND" + " " * 19 + "3RD" + "|")
     print(" " * 1 + "|" + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
-    print(" " * 1 + "|"  + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
+    print(" " * 1 + "|" + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
     print('''Press M for menu to return''')
     try:
         while True:
@@ -233,14 +255,14 @@ def question_amount_selection():
     """
     Allows the user to select amount of questions
     """
-    print('''Please enter either a 5, 10, 15 to select the amount of questions
-''')
+    print("Please enter the amount of questions you would like")
     while True:
         try:
-            question_selection = int(input(""))
+            question_selection = int(input("5, 10, 15:\n"))
             if question_selection not in [5, 10, 15]:
                 raise Exception
             else:
+                clear()
                 return question_selection
         except Exception:
             print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
@@ -272,7 +294,7 @@ def display_questions(game_questions, question_selection):
         print(game_questions[i]["question"])
         print(f"1 - {game_questions[i]['answers'][0]}")
         print(f"2 - {game_questions[i]['answers'][1]}")
-        print(f"3- {game_questions[i]['answers'][2]}")
+        print(f"3 - {game_questions[i]['answers'][2]}")
         print()
         correct_answer = generate_correct_answer(game_questions[i])
         users_choice = user_gameplay_input()
@@ -281,6 +303,8 @@ def display_questions(game_questions, question_selection):
             print(f"Thats correct well done you now have {point} point!")
         else:
             print("Thats incorrect im afraid oh well onto the next question")
+        time.sleep(3)
+        clear()
         i = i + 1
 
     return point
@@ -302,18 +326,19 @@ def user_gameplay_input():
     """
     Users game play input
     """
-    print("Please select either a 1, 2 or 3 for your answer")
+    print("Please select your selection (1, 2, 3):\n")
     while True:
         try:
-            users_choice = input("")
+            users_choice = input("1, 2 or 3:\n")
             users_choice = int(users_choice)
+            clear()
             print(f"You selected {str(users_choice)}!")
             if users_choice not in [1, 2, 3]:
                 raise Exception
             else:
                 return users_choice
         except Exception:
-            print("You didnt obviously read any of my hard work its 1 2 or 3!")
+            print("You didnt obviously read any of my hard work. its 1 2 or 3!")
 
 
 startup()

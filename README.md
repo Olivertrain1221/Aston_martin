@@ -3,25 +3,8 @@
 The Aston Martin quiz is a browser built quiz with Python. It is a simple multiple choice based on the prestigious vehicle brand Aston Martin, highlighting the vehicles specs, comforts and interesting facts.
 As the game was developed in Python for use in the terminal, it utilises the Code Institute Python Template to generate a "terminal" onto the page, making it available within a web browser.
 
-View the live website on ![Heroku](https://dashboard.heroku.com/apps/aston-martin-quiz) Please note: To open any links in this document in a new browser tab, please press cntrl + Click.
+View the live website on [Heroku](https://aston-martin-quiz.herokuapp.com) Please note: To open any links in this document in a new browser tab, please press cntrl + Click.
 
-## Table of Contents
-* User Experience Design (UX)
-* The Strategy Plane
-* Site Goals
-* User Stories
-* The Scope Plane
-* The Structure Plane
-* Opportunities
-* The Skeleton Plane
-* Wireframes
-* Logic Flow
-* The Surface Plane
-* Features
-* Future Enhancements
-* Testing
-* Deployment
-* Credits
 
 ## UX
 ### The Strategy Plane
