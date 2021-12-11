@@ -118,6 +118,44 @@ def get_scoresheet_five():
     return score_five
 
 
+def get_scoresheet_ten():
+    """
+    Gets the values in scoresheet 5
+    """
+    worksheet_list_five = SHEET.get_worksheet(1)
+    worksheet_values = worksheet_list_five.get_all_values()
+    print(worksheet_values)
+    score_five = worksheet_values
+    l = len(score_five)
+    for i in range(0, l):
+        for j in range(0, l-i-1):
+            if (score_five[j][1] > score_five[j + 1][1]):
+                tempo = score_five[j]
+                score_five[j] = score_five[j + 1]
+                score_five[j + 1] = tempo
+    print(score_five)
+    return score_five
+
+
+def get_scoresheet_fifteen():
+    """
+    Gets the values in scoresheet 5
+    """
+    worksheet_list_five = SHEET.get_worksheet(2)
+    worksheet_values = worksheet_list_five.get_all_values()
+    print(worksheet_values)
+    score_five = worksheet_values
+    l = len(score_five)
+    for i in range(0, l):
+        for j in range(0, l-i-1):
+            if (score_five[j][1] > score_five[j + 1][1]):
+                tempo = score_five[j]
+                score_five[j] = score_five[j + 1]
+                score_five[j + 1] = tempo
+    print(score_five)
+    return score_five
+
+
 def leaderboard():
     """
     Gets the leaderboard on screen and prints top players from excel
