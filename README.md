@@ -57,13 +57,7 @@ Acceptance Criteria:
 * The user should have the option to check back on previous records and see there ranking
 Implementation:
 * The user will have the ability to read through in a seperate excel sheet all of the players along with there points achieved
-#### Opportunities
-Arising from user stories
-| Opportunities	Importance	Viability / Feasibility
-| ------ | :------: | :------: | 
-| ** Provide a luxury knowledge quiz ** | 5 | 5|
-| ** Provide different amount of playable questions** | 5 | 5 |
-| ** Provide ability to control the time the game takes ** |	5 |	5 |
+
 
 ### The Skeleton Plane
 #### Wireframe mock-ups

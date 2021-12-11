@@ -1,8 +1,13 @@
 # DO TESTING FORM EXCEL MATT SENT
+# ASK TIM ABOUT GETTING FROM EXCEL SHEET and how to add the names and the user points
+# 
 # READ ME
 # WHERE AM I GOING TO USE THE CLEAR FUNCTION
 # COLOR OF BACK GROUND
 # Need to add validation to stop inputing a empty string...
+# Need to also ensure it only takes in letters
+#need it to get all info in the file in for five 10 15 and then work out heighest and
+
 
 from questions import aston_questions
 import random
@@ -61,7 +66,7 @@ def user_main_menu():
     -          Rules          -
     -       LeaderBoard       -
     -          Quit           -
-    Type 'P' for play, 'R' for rules or 'Q' for quit.""")
+    Type 'P' for play, 'R' for rules, 'L' for Leaderboard or 'Q' for quit.""")
     main_menu_selection()
 
 
@@ -94,6 +99,21 @@ def add_to_leaderboard(users_name, point, question_selection):
 
 
 def leaderboard():
+    """
+    Gets the leaderboard on screen and prints top players from excel
+    """
+    # first_best_of_five = SHEET.worksheet('scoreboard-5')
+    # retrieve all data from score  5, and put them all into a list/dict
+    # sort the list/dict via point column values (highest to lowest), MAYBE SORT -1 if ypu get stuck (-1 usualy reverse)
+    # grab 0 -1 2 index and display where i want. 
+    # second_best_of_five = 
+    # thrid_best_of_five = 
+    # first_best_of_ten = 
+    # second_best_of_ten = 
+    # thrid_best_of_ten = 
+    # first_best_of_fifteen = 
+    # second_best_of_fifteen = 
+    # thrid_best_of_fifteen = 
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print()
@@ -127,8 +147,9 @@ def leaderboard():
             else:
                 startup()
     except Exception:
-        print(" DERRRRR try 'M'")
-        rule_options()
+        clear()
+        print(" DERRRRR try inputing 'M'")
+        leaderboard()
 
 
 def main_menu_selection():
@@ -155,6 +176,7 @@ def main_menu_selection():
                     leaderboard()
                     break
     except Exception:
+        clear()
         print('''Hmmm you didnt follow the rules!!! You entered please try
 again with valid input.So once again Please type "P" to play,
 "R" to remind the rules or "Q" to quit.''')
@@ -169,17 +191,17 @@ def gets_username():
     print("Good choice on playing, but first lets get the intials to your name!")
     try:
         while True:
-            users_name = str(input(""))
-            if len(users_name) >= 2:
-                raise Exception
-            else:
+            users_name = str(input("Enter 1 to 3 letters:\n"))
+            if len(users_name) <= 3 and users_name.isalpha():
                 clear()
                 time.sleep(1.5)
                 print(f"Excellent thankyou for entering your name: {users_name}")
                 time.sleep(1)
                 return users_name
+            else:
+                print("Just your initials Wakey wakey")
     except Exception:
-        print("Just your initials Wakey wakey")
+        clear()
         gets_username()
 
 
