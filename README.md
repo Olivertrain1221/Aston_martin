@@ -41,8 +41,20 @@ Acceptance Criteria:
 Implementation:
 * The user will have the ability to read through in a seperate excel sheet all of the players along with there points achieved
 
-
 ### The Skeleton Plane
 #### Wireframe mock-ups
 Given that the application will be run within a terminal emulator which was provided within the CI template, there are limited options available in regards to how the program is displayed. Early on within the development of the theme of the quiz it made sense to have a luxury feel photo to to the luxury brand this then fitted in with the project and contents in the quiz to further the UI more pleasing to the user, I located a suitable background image on iStock. To position the terminal appropriately for the background graphic, and keeping user experience in mind, I decided to centre the terminal horizontally on the screen.  
 
+### Logic Flow
+To develop the logical steps required within the quiz, along with understanding how the different functions within the quiz logic elements would interact, I created a flow chart detailing the individual steps for the game. The full image can be viewed here Logic Flow Diagram
+The game logic can be broken down into main sections. The initial startup runs and produces the askii art it then runs a game loop which calls functions to loop generate and validate different information, from username, points, creating question selection for the user.
+
+### Game Loop
+ 
+The player will input what they would like to play a 5,10,15 quiz this will then establish the amount of questions produced from Aston martin
+I will utilise a variety of return methods into a game loop in order to be able to pull and pass specific user data into other functions, therefore I will not have to pass information from loop to loop to loop.
+
+### The Surface Plane
+#### Design
+Once I had decided on the theme of the quiz itself ie Aston Martin due to my mechanical background, I therefore knew the colour scheme and silhouette image I wanted as my background.
+ 

@@ -17,6 +17,7 @@ import os
 import time
 import gspread
 from google.oauth2.service_account import Credentials
+import operator
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -115,7 +116,9 @@ def get_scoresheet_five():
                 score_five[j] = score_five[j + 1]
                 score_five[j + 1] = tempo
     print(score_five)
-    return score_five
+    # # sorted_score_five = dict( sorted(score_five.items(), key = operator.itemgetter(1), reverse = True))
+    # print(sorted_score_five)
+    return sorted_score_five
 
 
 def get_scoresheet_ten():
@@ -152,8 +155,8 @@ def get_scoresheet_fifteen():
                 tempo = score_five[j]
                 score_five[j] = score_five[j + 1]
                 score_five[j + 1] = tempo
-    print(score_five)
-    return score_five
+    print(sorted_score_five)
+    return sorted_score_five
 
 
 def leaderboard():
