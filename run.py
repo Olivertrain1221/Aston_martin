@@ -77,11 +77,11 @@ def main_game_loop():
     question_selection = question_amount_selection()
     game_questions = generate_random_question(question_selection)
     point = display_questions(game_questions, question_selection)
-    add_to_leaderboard(users_name, point, question_selection)
+    add_to_leaderboard(question_selection)
     # startup()
 
 
-def add_to_leaderboard(users_name, point, question_selection):
+def add_to_leaderboard(question_selection):
     """
     This will add all users scores to excel sheet
     """
@@ -89,14 +89,14 @@ def add_to_leaderboard(users_name, point, question_selection):
     # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
     print("got to start of add leaderboard func")
     if question_selection == 5:
-        score_sheet_five = SHEET.worksheet('scoreboard-5')
-        score_sheet_five.append_row([users_name, point])
+        get_scoresheet_five()
+        print("running scoiresheet 5")
     elif question_selection == 10:
-        score_sheet_ten = SHEET.worksheet('scoreboard-10')
-        score_sheet_ten.append_row([users_name, point])
+        get_scoresheet_ten()
+        print("running scoiresheet 10")
     elif question_selection == 15:
-        score_sheet_fifteen = SHEET.worksheet('scoreboard-15')
-        score_sheet_fifteen.append_row([users_name, point])
+        get_scoresheet_fifteen()
+        print("running scoiresheet 15")
     print("got to end of add to leader board func, should of added")
 
 
@@ -108,56 +108,62 @@ def get_scoresheet_five():
     worksheet_values = worksheet_list_five.get_all_values()
     print(worksheet_values)
     score_five = worksheet_values
-    l = len(score_five)
-    for i in range(0, l):
-        for j in range(0, l-i-1):
+    length_score_five = len(score_five)
+    for i in range(0, length_score_five):
+        for j in range(0, length_score_five-i-1):
             if (score_five[j][1] > score_five[j + 1][1]):
                 tempo = score_five[j]
                 score_five[j] = score_five[j + 1]
                 score_five[j + 1] = tempo
+    print("running end of scoresheetfive")
     print(score_five)
     # # sorted_score_five = dict( sorted(score_five.items(), key = operator.itemgetter(1), reverse = True))
     # print(sorted_score_five)
-    return sorted_score_five
+    return score_five
 
 
 def get_scoresheet_ten():
     """
-    Gets the values in scoresheet 5
+    Gets the values in scoresheet 10
     """
-    worksheet_list_five = SHEET.get_worksheet(1)
-    worksheet_values = worksheet_list_five.get_all_values()
+    worksheet_list_ten = SHEET.get_worksheet(1)
+    worksheet_values = worksheet_list_ten.get_all_values()
     print(worksheet_values)
-    score_five = worksheet_values
-    l = len(score_five)
-    for i in range(0, l):
-        for j in range(0, l-i-1):
-            if (score_five[j][1] > score_five[j + 1][1]):
-                tempo = score_five[j]
-                score_five[j] = score_five[j + 1]
-                score_five[j + 1] = tempo
-    print(score_five)
-    return score_five
+    score_ten = worksheet_values
+    length_score_ten = len(score_ten)
+    for i in range(0, length_score_ten):
+        for j in range(0, length_score_ten-i-1):
+            if (score_ten[j][1] > score_ten[j + 1][1]):
+                tempo = score_ten[j]
+                score_ten[j] = score_ten[j + 1]
+                score_ten[j + 1] = tempo
+    print(score_ten)
+    print("running end of scoresheetten")
+    # # sorted_score_five = dict( sorted(score_five.items(), key = operator.itemgetter(1), reverse = True))
+    # print(sorted_score_five)
+    return score_ten
 
 
 def get_scoresheet_fifteen():
     """
     Gets the values in scoresheet 5
     """
-    worksheet_list_five = SHEET.get_worksheet(2)
-    worksheet_values = worksheet_list_five.get_all_values()
+    worksheet_list_fifteen = SHEET.get_worksheet(2)
+    worksheet_values = worksheet_list_fifteen.get_all_values()
     print(worksheet_values)
-    score_five = worksheet_values
-    l = len(score_five)
-    for i in range(0, l):
-        for j in range(0, l-i-1):
-            if (score_five[j][1] > score_five[j + 1][1]):
-                tempo = score_five[j]
-                score_five[j] = score_five[j + 1]
-                score_five[j + 1] = tempo
-    print(sorted_score_five)
-    return sorted_score_five
-
+    score_fifteen = worksheet_values
+    length_score_fifteen = len(score_fifteen)
+    for i in range(0, length_score_fifteen):
+        for j in range(0, length_score_fifteen-i-1):
+            if (score_fifteen[j][1] > score_fifteen[j + 1][1]):
+                tempo = score_fifteen[j]
+                score_fifteen[j] = score_fifteen[j + 1]
+                score_fifteen[j + 1] = tempo
+    print(score_fifteen)
+    print("running end of scoresheetfifteen")
+    # # sorted_score_five = dict( sorted(score_five.items(), key = operator.itemgetter(1), reverse = True))
+    # print(sorted_score_five)
+    return score_fifteen
 
 def leaderboard():
     """

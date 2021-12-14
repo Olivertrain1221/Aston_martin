@@ -57,4 +57,79 @@ I will utilise a variety of return methods into a game loop in order to be able 
 ### The Surface Plane
 #### Design
 Once I had decided on the theme of the quiz itself ie Aston Martin due to my mechanical background, I therefore knew the colour scheme and silhouette image I wanted as my background.
- 
+
+### Features
+#### Welcome Screen
+At the start of game the user is greeted with a menu which consists of a Quit option, Leaderboard option, Rules and Play option users are told what they are required to input for them to access a menu.
+
+---------------------
+
+#### Instructions Screen
+If users select the instructions option from the main menu the screen will display an overview of te game and how to play. Aswell as the option to return to the main menu.
+
+-----------------------
+
+#### Leaderboard Screen
+If the user selects the leaderboard option it prints a leaderboard to the screen and shows 1,2,3 for the 5, 10 and 15 game option and it gets the highest users points along with the key to that value to ensure its a live leaderboard
+
+------------------------
+
+#### Play option
+When selecting the play option the game then starts the game loop which then does the below.
+
+---------------------------
+
+#### Question amount selection
+When the user confirms that they would like to play the game, they are greeted by a message asking them  hjow many questions in the game would they like to play.
+
+-----------------
+
+#### Name Option
+The option is then given to the user to put in two alphabetic characters there intitials this is so it can show there name in the leaderboard with there point achieved in the excel sheet.
+
+--------------------------
+
+Once the name has been inputted the game loop comences and start to generate the questions from a seperate file. The questions are then displayed along witht the potential answers and the option to input a 1,2,3 this is then up to the user to input there choice.
+
+------------------------- 
+
+This then calls for the function to pass in the actual correct answer in comparison to the users guess. Depending on if it is correct depends on what the code odes next. 
+
+--------------
+
+If the answer inputted by the user is the correct answer it adds a point to the users score and gives a well done message witht the current users point value.
+
+-------------------------
+
+If the answer inputted by the user is wrong it gives the user a message of that incorrect onto the next question.
+
+----------------------
+
+After the game is finished it adds the users initials and there score to the excelsheet. Thi is how the leaderboard gets all of the players initials and there points and works out accordingly a 1st, 2nd, 3rd
+
+
+### Future Enhancements
+In the future I would add more questions to the questions file as although it generates the questions randomly there are only 30 questions currently.
+
+### Testing
+### Testing Strategy
+I took a two-stage approach to testing the application. The first stage was continuous testing as the application was being developed. With the application being based within the terminal, it was straight forward to test functions and print statements as they were being developed using the terminal within the IDE I was also able to check validation easily for any user inputs to ensure only text could be put in nothing else when required and only the correct input could be inputted when asked 5, 10, 15
+
+#### December 4th, 2021.
+I started an issue on Github that I wasn’t able to sort on the spot on my main menus validation. Which I update when I was able to assess the issue and identify the code required fixing this. The update in the issue shows also my correction and what I did to resolve the issue.
+
+----------------
+
+#### December 7th, 2021.
+I discovered a new bug that was a hidden issue that I hadn’t thought about correctly. This was for the main game loop. Randomly it would not generate a question.... this therefore was an issue. Due to the game generating questions randomly anyway it was hard to find out at what question in the questions file was throwing it off. Upon reflect it should have been a simple spot. The reasoning behind this was because the code was getting 3 answers as well on the next line. Then printed the question and the 3 possible answers. It was unable to get 3 possible answers for any of the random questions that were only holding 2 possible answers (“true/false”).
+
+----------------------
+
+#### December 13th, 2021.
+I recieved an email during my final stages of code testing saying my API had been suspended. i believed this to be due to a over use of refreshes and updates to the
+file in a short space of time when under testing. This therefore stopped my code running at all.
+
+--------------
+
+
+
