@@ -91,114 +91,129 @@ def add_to_leaderboard(question_selection, users_name, point):
     if question_selection == 5:
         score_sheet_five = SHEET.worksheet('scoreboard-5')
         score_sheet_five.append_row([users_name, point])
-        get_scoresheet_five()
+        # get_scoresheet_five()
         print("running scoiresheet 5")
     elif question_selection == 10:
         score_sheet_ten = SHEET.worksheet('scoreboard-10')
         score_sheet_ten.append_row([users_name, point])
-        get_scoresheet_ten()
+        # get_scoresheet_ten()
         print("running scoiresheet 10")
     elif question_selection == 15:
         score_sheet_fifteen = SHEET.worksheet('scoreboard-15')
         score_sheet_fifteen.append_row([users_name, point])
-        get_scoresheet_fifteen()
+        # get_scoresheet_fifteen()
         print("running scoiresheet 15")
     print("got to end of add to leader board func, should of added")
 
 
-def get_scoresheet_five():
-    """
-    Gets the values in scoresheet 5
-    """
-    worksheet_list_five = SHEET.worksheet('scoreboard-5')
-    worksheet_values = worksheet_list_five.get_all_values()
-    print(worksheet_values)
-    score_five = worksheet_values
-    length_score_five = len(score_five)
-    for i in range(0, length_score_five):
-        for j in range(0, length_score_five-i-1):
-            if (score_five[j][1] > score_five[j + 1][1]):
-                tempo = score_five[j]
-                score_five[j] = score_five[j + 1]
-                score_five[j + 1] = tempo
-    length_of_list = len(score_five)
-    first_place_five = score_five[length_of_list - 2]
-    second_place_five = score_five[length_of_list - 3]
-    third_place_five = score_five[length_of_list - 4]
-    print("running end of scoresheetfive")
-    print(score_five)
-    print(first_place_five)
-    return score_five
+# def get_scoresheet_five():
+#     """
+#     Gets the values in scoresheet 5
+#     """
+#     worksheet_list_five = SHEET.worksheet('scoreboard-5')
+#     worksheet_values = worksheet_list_five.get_all_values()
+#     print(worksheet_values)
+#     score_five = worksheet_values
+#     length_score_five = len(score_five)
+#     for i in range(0, length_score_five):
+#         for j in range(0, length_score_five-i-1):
+#             if (score_five[j][1] > score_five[j + 1][1]):
+#                 tempo = score_five[j]
+#                 score_five[j] = score_five[j + 1]
+#                 score_five[j + 1] = tempo
+#     print("running end of scoresheetfive")
+#     print(score_five)
+#     return score_five
 
 
-def get_scoresheet_ten():
-    """
-    Gets the values in scoresheet 10
-    """
-    worksheet_list_ten = SHEET.worksheet('scoreboard-10')
-    worksheet_values = worksheet_list_ten.get_all_values()
-    print(worksheet_values)
-    score_ten = worksheet_values
-    length_score_ten = len(score_ten)
-    for i in range(0, length_score_ten):
-        for j in range(0, length_score_ten-i-1):
-            if (score_ten[j][1] > score_ten[j + 1][1]):
-                tempo = score_ten[j]
-                score_ten[j] = score_ten[j + 1]
-                score_ten[j + 1] = tempo
-    length_of_list = len(score_ten)
-    first_place_ten = score_ten[length_of_list - 2]
-    second_place_ten = score_ten[length_of_list - 3]
-    third_place_ten = score_ten[length_of_list - 4]
-    print(score_ten)
-    return score_ten
+# def get_scoresheet_ten():
+#     """
+#     Gets the values in scoresheet 10
+#     """
+#     worksheet_list_ten = SHEET.worksheet('scoreboard-10')
+#     worksheet_values = worksheet_list_ten.get_all_values()
+#     print(worksheet_values)
+#     score_ten = worksheet_values
+#     length_score_ten = len(score_ten)
+#     for i in range(0, length_score_ten):
+#         for j in range(0, length_score_ten-i-1):
+#             if (score_ten[j][1] > score_ten[j + 1][1]):
+#                 tempo = score_ten[j]
+#                 score_ten[j] = score_ten[j + 1]
+#                 score_ten[j + 1] = tempo
+#     print(score_ten)
+#     return score_ten
 
 
-def get_scoresheet_fifteen():
-    """
-    Gets the values in scoresheet 5
-    """
-    worksheet_list_fifteen = SHEET.worksheet('scoreboard-15')
-    worksheet_values = worksheet_list_fifteen.get_all_values()
-    print(worksheet_values)
-    score_fifteen = worksheet_values
-    length_score_fifteen = len(score_fifteen)
-    for i in range(0, length_score_fifteen):
-        for j in range(0, length_score_fifteen-i-1):
-            if (score_fifteen[j][1] > score_fifteen[j + 1][1]):
-                tempo = score_fifteen[j]
-                score_fifteen[j] = score_fifteen[j + 1]
-                score_fifteen[j + 1] = tempo
-    length_of_list = len(score_fifteen)
-    first_place_fifteen = score_fifteen[length_of_list - 2]
-    second_place_fifteen = score_fifteen[length_of_list - 3]
-    third_place_fifteen = score_fifteen[length_of_list - 4]
-    print(score_fifteen)
-    print("running end of scoresheetfifteen")
-    leaderboard()
-    return score_fifteen
+# def get_scoresheet_fifteen():
+#     """
+#     Gets the values in scoresheet 5
+#     """
+#     worksheet_list_fifteen = SHEET.worksheet('scoreboard-15')
+#     worksheet_values = worksheet_list_fifteen.get_all_values()
+#     print(worksheet_values)
+#     score_fifteen = worksheet_values
+#     length_score_fifteen = len(score_fifteen)
+#     for i in range(0, length_score_fifteen):
+#         for j in range(0, length_score_fifteen-i-1):
+#             if (score_fifteen[j][1] > score_fifteen[j + 1][1]):
+#                 tempo = score_fifteen[j]
+#                 score_fifteen[j] = score_fifteen[j + 1]
+#                 score_fifteen[j + 1] = tempo
+#     print(score_fifteen)
+#     print("running end of scoresheetfifteen")
+#     return score_fifteen
+
+
+def get_scoresheet_list(rounds, position):
+    # worksheet
+    if rounds == 5:
+        worksheet = SHEET.worksheet('scoreboard-5')
+    elif rounds == 10:
+        worksheet = SHEET.worksheet('scoreboard-10')
+    elif rounds == 15:
+        worksheet = SHEET.worksheet('scoreboard-15')
+    # print(worksheet)
+    worksheet_values = worksheet.get_all_values()
+    score = worksheet_values
+    length_score = len(score)
+    for i in range(0, length_score):
+        for j in range(0, length_score-i-1):
+            if (score[j][1] > score[j + 1][1]):
+                tempo = score[j]
+                score[j] = score[j + 1]
+                score[j + 1] = tempo
+    # print("running end of scoresheet new")
+    return score[length_score - (position + 1)]
 
 
 def leaderboard():
     """
     Gets the leaderboard on screen and prints top players from excel
     """
-    get_scoresheet_five()
-    get_scoresheet_ten()
-    get_scoresheet_fifteen()
+    print("got to leaderboard")
+    first_place_five = get_scoresheet_list(5, 1)
+    first_place_ten = get_scoresheet_list(10, 1)
+    first_place_fifteen = get_scoresheet_list(15, 1)
+    second_place_five = get_scoresheet_list(5, 2)
+    second_place_ten = get_scoresheet_list(10, 2)
+    second_place_fifteen = get_scoresheet_list(15, 2)
+    third_place_five = get_scoresheet_list(5, 3)
+    third_place_ten = get_scoresheet_list(10, 3)
+    third_place_fifteen = get_scoresheet_list(15, 3)
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
-    print()
+    print(" " * 33 + first_place_five[0] + " " + first_place_five[1])
     print(" " * 32 + "_" * 9 + " " * 34)
     print(" " * 31 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 34)
-    print(" " * 31 + "|" + " " * 9 + "|" + " " * 34)
+    print(" " * 25 + second_place_five[0] + " " + second_place_five[1] + " " * 2 + "|" + " " * 9 + "|" + " " * 2 + third_place_five[0] + " " + third_place_five[1])
     print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
     print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
     print(" " * 24 + "|" + " " * 24 + "|")
     print(" " * 24 + "|" + "_" * 24 + "|")
     print()
-    print()  # Users name
-    print()  # Users point
+    print()
+    print(" " * 10 + first_place_ten[0] + " " + first_place_ten[1] + " " * 38 + first_place_fifteen[0] + " " + first_place_fifteen[1])
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
     print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
     print(" " * 8 + "|" + " " * 9 + "|" + " " * 36 + "|" + " " * 9 + "|" + " " * 8)
