@@ -17,7 +17,7 @@ import os
 import time
 import gspread
 from google.oauth2.service_account import Credentials
-import operator
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -77,92 +77,32 @@ def main_game_loop():
     question_selection = question_amount_selection()
     game_questions = generate_random_question(question_selection)
     point = display_questions(game_questions, question_selection)
+    end_of_game_message(users_name, point)
     add_to_leaderboard(question_selection, users_name, point)
-    # startup()
+    startup()
+
+
+def end_of_game_message(users_name, point):
+    clear()
+    print("Thankyou ever so much for playing my the Aston Martin Quiz")
+    print("")
+    print(f'Well {users_name} you achieved {point} points')
+    time.sleep(8.0)
 
 
 def add_to_leaderboard(question_selection, users_name, point):
     """
     This will add all users scores to excel sheet
     """
-    # NEEDS TO GET THE USERS NAME FROM GETS_USERNAME
-    # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
-    print("got to start of add leaderboard func")
     if question_selection == 5:
         score_sheet_five = SHEET.worksheet('scoreboard-5')
         score_sheet_five.append_row([users_name, point])
-        # get_scoresheet_five()
-        print("running scoiresheet 5")
     elif question_selection == 10:
         score_sheet_ten = SHEET.worksheet('scoreboard-10')
         score_sheet_ten.append_row([users_name, point])
-        # get_scoresheet_ten()
-        print("running scoiresheet 10")
     elif question_selection == 15:
         score_sheet_fifteen = SHEET.worksheet('scoreboard-15')
         score_sheet_fifteen.append_row([users_name, point])
-        # get_scoresheet_fifteen()
-        print("running scoiresheet 15")
-    print("got to end of add to leader board func, should of added")
-
-
-# def get_scoresheet_five():
-#     """
-#     Gets the values in scoresheet 5
-#     """
-#     worksheet_list_five = SHEET.worksheet('scoreboard-5')
-#     worksheet_values = worksheet_list_five.get_all_values()
-#     print(worksheet_values)
-#     score_five = worksheet_values
-#     length_score_five = len(score_five)
-#     for i in range(0, length_score_five):
-#         for j in range(0, length_score_five-i-1):
-#             if (score_five[j][1] > score_five[j + 1][1]):
-#                 tempo = score_five[j]
-#                 score_five[j] = score_five[j + 1]
-#                 score_five[j + 1] = tempo
-#     print("running end of scoresheetfive")
-#     print(score_five)
-#     return score_five
-
-
-# def get_scoresheet_ten():
-#     """
-#     Gets the values in scoresheet 10
-#     """
-#     worksheet_list_ten = SHEET.worksheet('scoreboard-10')
-#     worksheet_values = worksheet_list_ten.get_all_values()
-#     print(worksheet_values)
-#     score_ten = worksheet_values
-#     length_score_ten = len(score_ten)
-#     for i in range(0, length_score_ten):
-#         for j in range(0, length_score_ten-i-1):
-#             if (score_ten[j][1] > score_ten[j + 1][1]):
-#                 tempo = score_ten[j]
-#                 score_ten[j] = score_ten[j + 1]
-#                 score_ten[j + 1] = tempo
-#     print(score_ten)
-#     return score_ten
-
-
-# def get_scoresheet_fifteen():
-#     """
-#     Gets the values in scoresheet 5
-#     """
-#     worksheet_list_fifteen = SHEET.worksheet('scoreboard-15')
-#     worksheet_values = worksheet_list_fifteen.get_all_values()
-#     print(worksheet_values)
-#     score_fifteen = worksheet_values
-#     length_score_fifteen = len(score_fifteen)
-#     for i in range(0, length_score_fifteen):
-#         for j in range(0, length_score_fifteen-i-1):
-#             if (score_fifteen[j][1] > score_fifteen[j + 1][1]):
-#                 tempo = score_fifteen[j]
-#                 score_fifteen[j] = score_fifteen[j + 1]
-#                 score_fifteen[j + 1] = tempo
-#     print(score_fifteen)
-#     print("running end of scoresheetfifteen")
-#     return score_fifteen
 
 
 def get_scoresheet_list(rounds, position):
@@ -368,7 +308,7 @@ def display_questions(game_questions, question_selection):
         time.sleep(3)
         clear()
         i = i + 1
-
+        print("Nice try")
     return point
 
 
