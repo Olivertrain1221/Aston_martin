@@ -1,8 +1,5 @@
 # DO TESTING FORM EXCEL MATT SENT
-# ASK TIM ABOUT GETTING FROM EXCEL SHEET and how to add the names and the user points
 # pep 8 validation pep8online.com.
-
-# READ ME
 # WHERE AM I GOING TO USE THE CLEAR FUNCTION
 # COLOR OF BACK GROUND
 # Need to add validation to stop inputing a empty string...

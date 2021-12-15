@@ -3,6 +3,8 @@
 The Aston Martin quiz is a browser built quiz with Python. It is a simple multiple choice based on the prestigious vehicle brand Aston Martin, highlighting the vehicles specs, comforts and interesting facts.
 As the game was developed in Python for use in the terminal, it utilises the Code Institute Python Template to generate a "terminal" onto the page, making it available within a web browser.
 
+![Aston Martin Quiz](images/startup_screen.PNG)
+
 View the live website on [Heroku](https://aston-martin-quiz.herokuapp.com) Please note: To open any links in this document in a new browser tab, please press cntrl + Click.
 
 
@@ -19,7 +21,9 @@ View the live website on [Heroku](https://aston-martin-quiz.herokuapp.com) Pleas
 * As a user I want an online quiz about a luxury car brandw
 * As a user I want to be able to control the amount of questions that will be asked.
 As a user I want to be able to compare my results with other players of the games.
+
 #### The Scope Plane
+
 **Features planned:**
 * As there are certain restrictions in the scope of the development of the application, such as the terminal confines and methods of deployment. It will be important to ensure all functionality is contained within the game terminal screen.
 * Despite the confines of the terminal window, the site should be visually stimulating with a graphic/image behind it and clear to the user that it is a quiz.
@@ -62,48 +66,44 @@ Once I had decided on the theme of the quiz itself ie Aston Martin due to my mec
 #### Welcome Screen
 At the start of game the user is greeted with a menu which consists of a Quit option, Leaderboard option, Rules and Play option users are told what they are required to input for them to access a menu.
 
----------------------
+![Startup screen](images/startup_screen.PNG)
+
 
 #### Instructions Screen
 If users select the instructions option from the main menu the screen will display an overview of te game and how to play. Aswell as the option to return to the main menu.
 
------------------------
+![Instructions screen](images/instructions.PNG)
 
 #### Leaderboard Screen
 If the user selects the leaderboard option it prints a leaderboard to the screen and shows 1,2,3 for the 5, 10 and 15 game option and it gets the highest users points along with the key to that value to ensure its a live leaderboard
 
-------------------------
+![Leaderboard screen](images/leaderboard.PNG)
 
 #### Play option
 When selecting the play option the game then starts the game loop which then does the below.
 
----------------------------
+#### Name Option
+The option is then given to the user to put in two alphabetic characters there intitials this is so it can show there name in the leaderboard with there point achieved in the excel sheet.
+
+![Name Selection](images/name.PNG)
 
 #### Question amount selection
 When the user confirms that they would like to play the game, they are greeted by a message asking them  hjow many questions in the game would they like to play.
 
------------------
-
-#### Name Option
-The option is then given to the user to put in two alphabetic characters there intitials this is so it can show there name in the leaderboard with there point achieved in the excel sheet.
-
---------------------------
+![Amount of questions](images/amount_of_games.PNG)
 
 Once the name has been inputted the game loop comences and start to generate the questions from a seperate file. The questions are then displayed along witht the potential answers and the option to input a 1,2,3 this is then up to the user to input there choice.
 
-------------------------- 
+![Game question layout](images/game_running.PNG) 
 
-This then calls for the function to pass in the actual correct answer in comparison to the users guess. Depending on if it is correct depends on what the code odes next. 
-
---------------
-
+This then calls for the function to pass in the actual correct answer in comparison to the users guess. Depending on if it is correct depends on what the code does next. 
 If the answer inputted by the user is the correct answer it adds a point to the users score and gives a well done message witht the current users point value.
 
--------------------------
+![Correct answer ](images/amount_of_games.PNG)
 
 If the answer inputted by the user is wrong it gives the user a message of that incorrect onto the next question.
 
-----------------------
+![Wrong answer](images/wrong_answer.PNG)
 
 After the game is finished it adds the users initials and there score to the excelsheet. Thi is how the leaderboard gets all of the players initials and there points and works out accordingly a 1st, 2nd, 3rd
 
@@ -117,7 +117,7 @@ I took a two-stage approach to testing the application. The first stage was cont
 
 
 
-<!-- ### Second stage testing
+### Second stage testing
 #### For the second stage of testing my project, I utilised a more formal structured approach and created a test schedule for the application which covered each logical cycle. I then proceeded to run through the manual tests that i had made and made sure to note any errors that I found. Where the code didnt do as expected, the code was altered to correct the behaviour almost straight away unless it was a major issue which I documented via the Github issues section. After extensive testing the only issues. I found was the odd validation error that the user could input a symbol instead of there intitials. Once the code was adjusted accordingl the code past the validation.
 
 The individual python files were also validated using pep8online.com further details are below.
@@ -146,7 +146,7 @@ o   game.py file top
 o   player.py file
 o   run.py file
 o   setup.py file
-o   start.py file -->
+o   start.py file
 
 ### Notable Bugs
 
