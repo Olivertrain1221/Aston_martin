@@ -77,11 +77,11 @@ def main_game_loop():
     question_selection = question_amount_selection()
     game_questions = generate_random_question(question_selection)
     point = display_questions(game_questions, question_selection)
-    add_to_leaderboard(question_selection)
+    add_to_leaderboard(question_selection, users_name, point)
     # startup()
 
 
-def add_to_leaderboard(question_selection):
+def add_to_leaderboard(question_selection, users_name, point):
     """
     This will add all users scores to excel sheet
     """
@@ -89,12 +89,18 @@ def add_to_leaderboard(question_selection):
     # NEEDS TO GET USERS SCORE AT END OF LOOP AND ADD IT INTO THE SPREADSHEET
     print("got to start of add leaderboard func")
     if question_selection == 5:
+        score_sheet_five = SHEET.worksheet('scoreboard-5')
+        score_sheet_five.append_row([users_name, point])
         get_scoresheet_five()
         print("running scoiresheet 5")
     elif question_selection == 10:
+        score_sheet_ten = SHEET.worksheet('scoreboard-10')
+        score_sheet_ten.append_row([users_name, point])
         get_scoresheet_ten()
         print("running scoiresheet 10")
     elif question_selection == 15:
+        score_sheet_fifteen = SHEET.worksheet('scoreboard-15')
+        score_sheet_fifteen.append_row([users_name, point])
         get_scoresheet_fifteen()
         print("running scoiresheet 15")
     print("got to end of add to leader board func, should of added")
@@ -104,7 +110,7 @@ def get_scoresheet_five():
     """
     Gets the values in scoresheet 5
     """
-    worksheet_list_five = SHEET.get_worksheet(0)
+    worksheet_list_five = SHEET.worksheet('scoreboard-5')
     worksheet_values = worksheet_list_five.get_all_values()
     print(worksheet_values)
     score_five = worksheet_values
@@ -115,10 +121,13 @@ def get_scoresheet_five():
                 tempo = score_five[j]
                 score_five[j] = score_five[j + 1]
                 score_five[j + 1] = tempo
+    length_of_list = len(score_five)
+    first_place_five = score_five[length_of_list - 2]
+    second_place_five = score_five[length_of_list - 3]
+    third_place_five = score_five[length_of_list - 4]
     print("running end of scoresheetfive")
     print(score_five)
-    # # sorted_score_five = dict( sorted(score_five.items(), key = operator.itemgetter(1), reverse = True))
-    # print(sorted_score_five)
+    print(first_place_five)
     return score_five
 
 
@@ -126,7 +135,7 @@ def get_scoresheet_ten():
     """
     Gets the values in scoresheet 10
     """
-    worksheet_list_ten = SHEET.get_worksheet(1)
+    worksheet_list_ten = SHEET.worksheet('scoreboard-10')
     worksheet_values = worksheet_list_ten.get_all_values()
     print(worksheet_values)
     score_ten = worksheet_values
@@ -137,10 +146,11 @@ def get_scoresheet_ten():
                 tempo = score_ten[j]
                 score_ten[j] = score_ten[j + 1]
                 score_ten[j + 1] = tempo
+    length_of_list = len(score_ten)
+    first_place_ten = score_ten[length_of_list - 2]
+    second_place_ten = score_ten[length_of_list - 3]
+    third_place_ten = score_ten[length_of_list - 4]
     print(score_ten)
-    print("running end of scoresheetten")
-    # # sorted_score_five = dict( sorted(score_five.items(), key = operator.itemgetter(1), reverse = True))
-    # print(sorted_score_five)
     return score_ten
 
 
@@ -148,7 +158,7 @@ def get_scoresheet_fifteen():
     """
     Gets the values in scoresheet 5
     """
-    worksheet_list_fifteen = SHEET.get_worksheet(2)
+    worksheet_list_fifteen = SHEET.worksheet('scoreboard-15')
     worksheet_values = worksheet_list_fifteen.get_all_values()
     print(worksheet_values)
     score_fifteen = worksheet_values
@@ -159,43 +169,33 @@ def get_scoresheet_fifteen():
                 tempo = score_fifteen[j]
                 score_fifteen[j] = score_fifteen[j + 1]
                 score_fifteen[j + 1] = tempo
+    length_of_list = len(score_fifteen)
+    first_place_fifteen = score_fifteen[length_of_list - 2]
+    second_place_fifteen = score_fifteen[length_of_list - 3]
+    third_place_fifteen = score_fifteen[length_of_list - 4]
     print(score_fifteen)
     print("running end of scoresheetfifteen")
-    # # sorted_score_five = dict( sorted(score_five.items(), key = operator.itemgetter(1), reverse = True))
-    # print(sorted_score_five)
+    leaderboard()
     return score_fifteen
+
 
 def leaderboard():
     """
     Gets the leaderboard on screen and prints top players from excel
     """
-    # first_best_of_five = SHEET.worksheet('scoreboard-5')
-    # retrieve all data from score  5, and put them all into a list/dict
-    # sort the list/dict via point column values (highest to lowest), MAYBE SORT -1 if ypu get stuck (-1 usualy reverse)
-    # grab 0 -1 2 index and display where i want.
-    # # worksheet_five = sh.
     get_scoresheet_five()
-    # best_of_five = worksheet.row_values(1)
-    # thrid_best_of_five = 
-    # first_best_of_ten = 
-    # second_best_of_ten = 
-    # thrid_best_of_ten = 
-    # first_best_of_fifteen = 
-    # second_best_of_fifteen = 
-    # thrid_best_of_fifteen = 
+    get_scoresheet_ten()
+    get_scoresheet_fifteen()
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print()
     print(" " * 32 + "_" * 9 + " " * 34)
-    # print(" " * 32 + "|" + " " * 5 + "|" + " " * 34)
-    # print(" " * 32 + "|" + " " * 5 + "|" + " " * 34) TEMP SEE TOP IN RUNNING
     print(" " * 31 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 34)
     print(" " * 31 + "|" + " " * 9 + "|" + " " * 34)
     print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
     print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
     print(" " * 24 + "|" + " " * 24 + "|")
     print(" " * 24 + "|" + "_" * 24 + "|")
-    # print(" " * 25 + "|" + " " * 20 + "|" + " " * 34) # EDITING
     print()
     print()  # Users name
     print()  # Users point
