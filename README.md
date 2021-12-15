@@ -31,7 +31,7 @@ As a user I want to be able to compare my results with other players of the game
 
 ### The Structure Plane
 User Story:
-> As a user, I want a fun and simple quiz to test my knowledge
+As a user, I want a fun and simple quiz to test my knowledge
 
 Acceptance Criteria:
 * It should be clear to the user that this is a quiz, what the quiz is about and how to play it with a option to read rules.
@@ -39,7 +39,7 @@ Implementation:
 * The layout, use of askiart helps in order to create a fun user themed quiz. I also have used a background image to enable to user to feel in a luxurey quiz like the brand itself i have also added along the project validation for each user input.
 
 User Story:
- > As a user, I want to be able to check my points and how many I have got in comparison to other players.
+  As a user, I want to be able to check my points and how many I have got in comparison to other players.
 Acceptance Criteria:
 * The user should have the option to check back on previous records and see there ranking
 Implementation:
@@ -118,35 +118,25 @@ I took a two-stage approach to testing the application. The first stage was cont
 
 
 ### Second stage testing
-#### For the second stage of testing my project, I utilised a more formal structured approach and created a test schedule for the application which covered each logical cycle. I then proceeded to run through the manual tests that i had made and made sure to note any errors that I found. Where the code didnt do as expected, the code was altered to correct the behaviour almost straight away unless it was a major issue which I documented via the Github issues section. After extensive testing the only issues. I found was the odd validation error that the user could input a symbol instead of there intitials. Once the code was adjusted accordingl the code past the validation.
+For the second stage of testing my project, I utilised a more formal structured approach and created a test schedule for the application which covered each logical cycle. I then proceeded to run through the manual tests that i had made and made sure to note any errors that I found. Where the code didnt do as expected, the code was altered to correct the behaviour almost straight away unless it was a major issue which I documented via the Github issues section. After extensive testing the only issues. I found was the odd validation error that the user could input a symbol instead of there intitials. Once the code was adjusted accordingl the code past the validation.
 
 The individual python files were also validated using pep8online.com further details are below.
 
 ### Testing Overview
 Testing was divided into different sections to ensure everything was tested individually with test cases developed for each area.
  
-### A full detailed breakdown of the testing procedures and methodology can be found in the [Testing.md](TESTING.md) file here
+A full detailed breakdown of the testing procedures and methodology can be found in the [Testing.md](TESTING.md) file here
 ### Validator Testing
-#### pep8online.com - I utilised pep8online.com to validate my python code. All python files were checked with no errors reported.
-#### The following files however did include warnings regarding a line break before binary operator
-#### run.py
+pep8online.com - I utilised pep8online.com to validate my python code. All python files were checked with no errors reported.
+The following files however did include warnings regarding a line break before binary operator
 
-### The warning suggests that there should not be a line break before a binary operator, however on checking with the python pep 8 guidelines it states that the line break should be before the binary operator. The point in the PEP8 guidelines can be found here. As the guidelines may have been updated more recently than the validator, the warning message regarding the binary operators was ignored.
 #### Screenshots of the validator reports are here:
-o   blank.py file
-o   board.py file
-o   boat.py file
-o   comp.py file
-o   editscreen.py file
-o   game.py file top
-o   player.py file
-o   run.py file
-o   setup.py file
-o   start.py file
+![run.py](images/pep8_fail.PNG)
+![questions.py](images/pep8_questions_fail.PNG)
 
 ### Notable Bugs
 
-#### December 4th, 2021.
+#### December 4th, 2021
 I started an issue on Github that I wasn’t able to sort on the spot on my main menus validation. Which I update when I was able to assess the issue and identify the code required fixing this. The update in the issue shows also my correction and what I did to resolve the issue.
 
 ![Main menu validation bug](images/github_issues_main_menu_validation.PNG)
@@ -178,7 +168,7 @@ The os library was imported to utilise the os.system and os.name functionality. 
 I also added in the GSpread function which allowed me to link the API for google sheets into the file so I could sucessfully create a live leaderboard that would change on every players input.
 
 #### Deployment
-The site was deployed via Heroku, and the live link can be found here - [Aston Martin Quiz]()
+The site was deployed via Heroku, and the live link can be found here - [Aston Martin Quiz Heroku](https://aston-martin-quiz.herokuapp.com)
 The project was developed utilising a Code Institute provided template. During the development of the project the template was updated to increase functionality. I switched over to the new template mid project which you can see within the commit history. Some of the deployment steps below are specifically required for the new CI template and may not be applicable to older versions, or different projects.
 Project Deployment
 To deploy the project through Heroku I followed these steps:
@@ -219,7 +209,7 @@ Stack overflow was useful a few times whilst I developed my understanding of fil
 ### Acknowledgements
 I'd like to thank the following:
 •   My mentor Tim Nelson for encouraging me throughout the project and providing me with supporting and useful coding skills and knowledge.
-•   Matt Boden for helping with the planning of the logic of how it is going to generate random numbers and pull associated questions aswell as answers.
+•   Matt Bodden for helping with the planning of the logic of how it is going to generate random numbers and pull associated questions aswell as answers.
 •   CI Tutor support for helping in regards to sorting through the list of my excel sheet.
 
 

@@ -1,6 +1,8 @@
 # DO TESTING FORM EXCEL MATT SENT
-# pep 8 validation pep8online.com.
+# pep 8 validation pep8online.com
+# sort out spacing to long lines
 # COLOR OF BACK GROUND
+#
 
 from questions import aston_questions
 import random
@@ -133,27 +135,37 @@ def leaderboard():
     third_place_five = get_scoresheet_list(5, 3)
     third_place_ten = get_scoresheet_list(10, 3)
     third_place_fifteen = get_scoresheet_list(15, 3)
-    
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print(" " * 33 + first_place_five[0] + " " + first_place_five[1])
     print(" " * 32 + "_" * 9 + " " * 34)
     print(" " * 31 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 34)
-    print(" " * 25 + second_place_five[0] + " " + second_place_five[1] + " " * 2 + "|" + " " * 9 + "|" + " " * 2 + third_place_five[0] + " " + third_place_five[1])
+    print(" " * 25 + second_place_five[0] + " " + second_place_five[1] +
+          " " * 2 + "|" + " " * 9 + "|" + " " * 2 +
+          third_place_five[0] + " " + third_place_five[1])
     print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
     print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
     print(" " * 24 + "|" + " " * 9 + "5 quiz" + " " * 9 + "|")
     print(" " * 24 + "|" + "_" * 24 + "|")
     print()
     print()
-    print(" " * 11 + second_place_ten[0] + " " + second_place_ten[1] + " " * 41 + first_place_fifteen[0] + " " + first_place_fifteen[1])
+    print(" " * 11 + second_place_ten[0] + " " + second_place_ten[1] +
+          " " * 41 + first_place_fifteen[0] + " " + first_place_fifteen[1])
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
-    print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
-    print(" " * 2 + first_place_ten[0] + " " + first_place_ten[1] + " " * 2 + "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " + third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " " + second_place_fifteen[1] +" " * 2 + "|" + " " * 9 + "|" + " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
-    print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 + "_" * 7 + "/" + " " * 10 + "\\" + "_" * 7)
-    print(" " * 1 + "|" + " " + "2ND" + " " * 16 + "3RD" + "|" + " " * 21 + "|" + " " + "2ND" + " " * 19 + "3RD" + "|")
+    print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|"
+          + " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
+    print(" " * 2 + first_place_ten[0] + " " + first_place_ten[1] + " " * 2
+          + "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " "
+          + third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " "
+          + second_place_fifteen[1] + " " * 2 + "|" + " " * 9 + "|" +
+          " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
+    print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 +
+          "_" * 7 + "/" + " " * 10 + "\\" + "_" * 7)
+    print(" " * 1 + "|" + " " + "2ND" + " " * 16 + "3RD" + "|" + " " * 21 +
+          "|" + " " + "2ND" + " " * 19 + "3RD" + "|")
     print(" " * 1 + "|" + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
-    print(" " * 1 + "|" + " " * 8 + "10 Quiz" + " " * 8 + "|" + " " * 21 + "|" + " " * 10 + "15 quiz" + " " * 9 + "|")
+    print(" " * 1 + "|" + " " * 8 + "10 Quiz" + " " * 8 + "|" + " " * 21 +
+          "|" + " " * 10 + "15 quiz" + " " * 9 + "|")
     print('''Press M for menu to return''')
     try:
         while True:
@@ -205,14 +217,16 @@ def gets_username():
     Gets the users name
     """
     clear()
-    print("Good choice on playing, but first lets get the intials to your name!")
+    print("Good choice on playing, but first lets get the intials to \
+        your name!")
     try:
         while True:
             users_name = str(input("Enter 1 to 3 letters:\n"))
             if len(users_name) <= 3 and users_name.isalpha():
                 clear()
                 time.sleep(1.5)
-                print(f"Excellent thankyou for entering your name: {users_name}")
+                print(f"Excellent thankyou for entering \
+your name: {users_name}")
                 time.sleep(1)
                 return users_name
             else:
@@ -227,11 +241,13 @@ def rule_options():
     when selected will display rules a
     """
     clear()
-    print('''Welcome to the Aston Martin quiz, a quiz for all you buzzing petrol
-heads!''')
-    print('''In this game you will be asked a range of questions and the 
-answers will need to be inputted but using the numbers on your keyboard
-"1, 2, 3".''')
+    print('''Welcome to the Aston Martin quiz, a quiz for all you
+buzzing petrol heads!''')
+    print(" ")
+    print('''In this game you will be asked a range of questions
+and the answers will need to be inputted but using the numbers on
+your keyboard "1, 2, 3".''')
+    print(" ")
     print('''Press M for menu to return''')
     try:
         while True:
@@ -260,8 +276,8 @@ def question_amount_selection():
                 clear()
                 return question_selection
         except Exception:
-            print('''Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, 
-15 ''')
+            print("Hmmm you didnt follow the rules AGAIN!!! Please enter 5, 10, \
+15")
 
 
 def generate_random_question(question_selection):
@@ -333,7 +349,8 @@ def user_gameplay_input():
             else:
                 return users_choice
         except Exception:
-            print("You didnt obviously read any of my hard work. its 1 2 or 3!")
+            print("You didnt obviously read any of my hard work. \
+                its 1 2 or 3!")
 
 
 startup()
