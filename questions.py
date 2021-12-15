@@ -1,11 +1,13 @@
 aston_questions = [
     {
-        'question': 'What is the biggest naturally aspirated engine that Aston Martin sell?:',
+        'question': 'What is the biggest naturally aspirated engine that \
+        Aston Martin sell?:',
         'answers': ['V8', 'V12', '1.8'],
         'correct': 'V12'
     },
     {
-        'question': 'You may remember in James bond there is a "special" branch for customiseable anything:',
+        'question': 'You may remember in James bond there is a "special" branch \
+         for customiseable anything:',
         'answers': ['Cue', 'Q', 'K'],
         'correct': 'Q'
     },
@@ -20,7 +22,8 @@ aston_questions = [
         'correct': 'Wings'
     },
     {
-        'question': 'In the Vanquish there is a option to change the steering wheel shape to:',
+        'question': 'In the Vanquish there is a option to change \
+        the steering wheel shape to:',
         'answers': ['Octagon', 'Square', 'Circle'],
         'correct': 'Square'
     },
@@ -39,14 +42,16 @@ aston_questions = [
         'correct': 'Cygnet'
     },
     {
-        'question': 'Which one of these AMG engines is NOT currently being used in the brands cars:',
+        'question': 'Which one of these AMG engines is NOT currently \
+        being used in the brands cars:',
         'answers': ['V6 twin turbo',
                     'V8 twin turbo',
                     'V12 twin turbo'],
         'correct': 'V6 twin turbo'
     },
     {
-        'question': 'The DBS Superleggera has a 0.60 time of .... and has .... bhp:',
+        'question': 'The DBS Superleggera has a 0.60 time of .... \
+        and has .... bhp:',
         'answers': ['3.4 ftlb 715 bhp',
                     '4.4 ftlb 550 bhp',
                     '3.8 ftlb 650 bhp'],
@@ -60,14 +65,16 @@ aston_questions = [
         'correct': 'Dog leg 7 speed manual'
     },
     {
-        'question': 'What is so special About the ranges sportscars in terms of weight over each axel (front to rear):',
+        'question': 'What is so special About the ranges sportscars in \
+        terms of weight over each axel (front to rear):',
         'answers': ['45:55',
                     '51:49',
                     '30:70'],
         'correct': '51:49'
     },
     {
-        'question': 'What is the car used in the film Casino royale that rolls:',
+        'question': 'What is the car used in the film Casino \
+        royale that rolls:',
         'answers': ['Vantage',
                     'DB9',
                     'DBS'],
@@ -116,7 +123,8 @@ aston_questions = [
         'correct': '1913'
     },
     {
-        'question': 'In James Bond the big red button under the gear lever was to do what?:',
+        'question': 'In James Bond the big red button under \
+         the gear lever was to do what?:',
         'answers': ['Super speed',
                     'Fire the rockets',
                     'Ejector Seat'],
@@ -144,7 +152,8 @@ aston_questions = [
         'correct': 'V8 Twin Super Charge'
     },
     {
-        'question': 'When the DBS Superleggera was lauched with Tag Haeur what gift did you get with the car?',
+        'question': 'When the DBS Superleggera was lauched with \
+        Tag Haeur what gift did you get with the car?',
         'answers': ['Washing Machine',
                     'Embroided lighter',
                     'Limited edition Watch'],

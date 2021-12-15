@@ -317,7 +317,6 @@ def display_questions(game_questions, question_selection):
         time.sleep(3)
         clear()
         i = i + 1
-        print("Nice try")
     return point
 
 
