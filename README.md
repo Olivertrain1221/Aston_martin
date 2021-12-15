@@ -129,11 +129,7 @@ Testing was divided into different sections to ensure everything was tested indi
 ### Validator Testing
 #### pep8online.com - I utilised pep8online.com to validate my python code. All python files were checked with no errors reported.
 #### The following files however did include warnings regarding a line break before binary operator
-#### board.py - 2 warnings
-#### comp.py - 1 warning
-#### game.py - 27 warnings
-#### player.py - 2 warnings
-#### setup.py - 4 warnings
+#### run.py
 
 ### The warning suggests that there should not be a line break before a binary operator, however on checking with the python pep 8 guidelines it states that the line break should be before the binary operator. The point in the PEP8 guidelines can be found here. As the guidelines may have been updated more recently than the validator, the warning message regarding the binary operators was ignored.
 #### Screenshots of the validator reports are here:
@@ -153,23 +149,18 @@ o   start.py file
 #### December 4th, 2021.
 I started an issue on Github that I wasn’t able to sort on the spot on my main menus validation. Which I update when I was able to assess the issue and identify the code required fixing this. The update in the issue shows also my correction and what I did to resolve the issue.
 
-----------------
+![Main menu validation bug](images/github_issues_main_menu_validation.PNG)
 
 #### December 7th, 2021.
 I discovered a new bug that was a hidden issue that I hadn’t thought about correctly. This was for the main game loop. Randomly it would not generate a question.... this therefore was an issue. Due to the game generating questions randomly anyway it was hard to find out at what question in the questions file was throwing it off. Upon reflect it should have been a simple spot. The reasoning behind this was because the code was getting 3 answers as well on the next line. Then printed the question and the 3 possible answers. It was unable to get 3 possible answers for any of the random questions that were only holding 2 possible answers (“true/false”).
 
-----------------------
+![Main game loop bug](images/github_issues_random_question.PNG)
 
 #### December 13th, 2021.
 I recieved an email during my final stages of code testing saying my API had been suspended. i believed this to be due to a over use of refreshes and updates to the
 file in a short space of time when under testing. This therefore stopped my code running at all.
 
---------------
-
-December 7th, 2021.
-I discovered a new bug that was a hidden issue that I hadn’t thought about correctly. This was for the main game loop. Randomly it would not generate a question.... this therefore was an issue. Due to the game generating questions randomly anyway it was hard to find out at what question in the questions file was throwing it off. Upon reflect it should have been a simple spot. The reasoning behind this was because the code was getting 3 answers as well on the next line. Then printed the question and the 3 possible answers. It was unable to get 3 possible answers for any of the random questions that were only holding 2 possible answers (“true/false”).
-
-----------------------
+![API Bug error isses](images/github_api_crash.PNG)
 
 ### Libraries Utilised
 

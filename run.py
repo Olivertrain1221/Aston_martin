@@ -1,11 +1,6 @@
 # DO TESTING FORM EXCEL MATT SENT
 # pep 8 validation pep8online.com.
-# WHERE AM I GOING TO USE THE CLEAR FUNCTION
 # COLOR OF BACK GROUND
-# Need to add validation to stop inputing a empty string...
-# Need to also ensure it only takes in letters
-# need it to get all info in the file in for five 10 15 and then work out heighest and
-
 
 from questions import aston_questions
 import random
@@ -138,6 +133,7 @@ def leaderboard():
     third_place_five = get_scoresheet_list(5, 3)
     third_place_ten = get_scoresheet_list(10, 3)
     third_place_fifteen = get_scoresheet_list(15, 3)
+    
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print(" " * 33 + first_place_five[0] + " " + first_place_five[1])
@@ -150,10 +146,10 @@ def leaderboard():
     print(" " * 24 + "|" + "_" * 24 + "|")
     print()
     print()
-    print(" " * 11 + first_place_ten[0] + " " + first_place_ten[1] + " " * 41 + first_place_fifteen[0] + " " + first_place_fifteen[1])
+    print(" " * 11 + second_place_ten[0] + " " + second_place_ten[1] + " " * 41 + first_place_fifteen[0] + " " + first_place_fifteen[1])
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
     print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
-    print(" " * 2 + second_place_ten[0] + " " + second_place_ten[1] + "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " + third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " " + second_place_fifteen[1] +" " * 2 + "|" + " " * 9 + "|" + " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
+    print(" " * 2 + first_place_ten[0] + " " + first_place_ten[1] + " " * 2 + "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " + third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " " + second_place_fifteen[1] +" " * 2 + "|" + " " * 9 + "|" + " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
     print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 + "_" * 7 + "/" + " " * 10 + "\\" + "_" * 7)
     print(" " * 1 + "|" + " " + "2ND" + " " * 16 + "3RD" + "|" + " " * 21 + "|" + " " + "2ND" + " " * 19 + "3RD" + "|")
     print(" " * 1 + "|" + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
