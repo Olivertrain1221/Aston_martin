@@ -108,51 +108,18 @@ If the answer inputted by the user is wrong it gives the user a message of that 
 After the game is finished it adds the users initials and there score to the excelsheet. Thi is how the leaderboard gets all of the players initials and there points and works out accordingly a 1st, 2nd, 3rd
 
 
-### Future Enhancements
+
+## Future Enhancements
 In the future I would add more questions to the questions file as although it generates the questions randomly there are only 30 questions currently.
 
-### Testing
-### Testing Strategy
-I took a two-stage approach to testing the application. The first stage was continuous testing as the application was being developed. With the application being based within the terminal, it was straight forward to test functions and print statements as they were being developed using the terminal within the IDE I was also able to check validation easily for any user inputs to ensure only text could be put in nothing else when required and only the correct input could be inputted when asked 5, 10, 15
+
+
+## Testing
+For all testing please click here to go to the [TESTING.md](TESTING.md)
 
 
 
-### Second stage testing
-For the second stage of testing my project, I utilised a more formal structured approach and created a test schedule for the application which covered each logical cycle. I then proceeded to run through the manual tests that i had made and made sure to note any errors that I found. Where the code didnt do as expected, the code was altered to correct the behaviour almost straight away unless it was a major issue which I documented via the Github issues section. After extensive testing the only issues. I found was the odd validation error that the user could input a symbol instead of there intitials. Once the code was adjusted accordingl the code past the validation.
-
-The individual python files were also validated using pep8online.com further details are below.
-
-### Testing Overview
-Testing was divided into different sections to ensure everything was tested individually with test cases developed for each area.
- 
-A full detailed breakdown of the testing procedures and methodology can be found in the [Testing.md](TESTING.md) file here
-### Validator Testing
-pep8online.com - I utilised pep8online.com to validate my python code. All python files were checked with no errors reported.
-The following files however did include warnings regarding a line break before binary operator
-
-#### Screenshots of the validator reports are here:
-![run.py](images/pep8_fail.PNG)
-![questions.py](images/pep8_questions_fail.PNG)
-
-### Notable Bugs
-
-#### December 4th, 2021
-I started an issue on Github that I wasn’t able to sort on the spot on my main menus validation. Which I update when I was able to assess the issue and identify the code required fixing this. The update in the issue shows also my correction and what I did to resolve the issue.
-
-![Main menu validation bug](images/github_issues_main_menu_validation.PNG)
-
-#### December 7th, 2021.
-I discovered a new bug that was a hidden issue that I hadn’t thought about correctly. This was for the main game loop. Randomly it would not generate a question.... this therefore was an issue. Due to the game generating questions randomly anyway it was hard to find out at what question in the questions file was throwing it off. Upon reflect it should have been a simple spot. The reasoning behind this was because the code was getting 3 answers as well on the next line. Then printed the question and the 3 possible answers. It was unable to get 3 possible answers for any of the random questions that were only holding 2 possible answers (“true/false”).
-
-![Main game loop bug](images/github_issues_random_question.PNG)
-
-#### December 13th, 2021.
-I recieved an email during my final stages of code testing saying my API had been suspended. i believed this to be due to a over use of refreshes and updates to the
-file in a short space of time when under testing. This therefore stopped my code running at all.
-
-![API Bug error isses](images/github_api_crash.PNG)
-
-### Libraries Utilised
+## Libraries Utilised
 
 #### Built in Python Libraries
 Several of the built in python libraries were utilised to enable additional functionality within the application math.
@@ -194,11 +161,14 @@ To deploy the project through Heroku I followed these steps:
 * Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
 * There is then a link to run it in the heroku site which opens the game into a new seperate tab.
 
-### Credits
+Once in the file Because I am including packages in the requirements.txt file. you must also do the following:
+
+1: how to download just the packages required for this project (pip3 install -r requirements.txt)
+and
+2: how to freeze the commands for a local copy of this project on their own account (pip3 freeze --local > requirements.txt)
+## Credits
 #### Code
 I was informed of a method to clear the terminal by mentor Tim Nelson who had found the method in a Python cheat sheet provided by coding4you. Tim had suggested that i used the method successfully within my project to keep the window clearer to improve UX.
-
-I also was helped to plan my logic of the code with another student Matt Bodden, who helped regarding the games loop.
 
 ### Content
 

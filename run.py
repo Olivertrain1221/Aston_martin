@@ -337,7 +337,6 @@ def user_gameplay_input():
             print(f"You selected {int(users_choice)}!")
             if users_choice not in [1, 2, 3]:
                 raise Exception
-                user_gameplay_input()
             else:
                 return users_choice
         except Exception:

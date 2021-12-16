@@ -3,6 +3,50 @@ To navigate back to the main README click [here](README.md)
 
 The full testing spreadsheet containing all the tests performed during the testing phase of development can be found here
 
+
+### Testing
+### Testing Strategy
+I took a two-stage approach to testing the application. The first stage was continuous testing as the application was being developed. With the application being based within the terminal, it was straight forward to test functions and print statements as they were being developed using the terminal within the IDE I was also able to check validation easily for any user inputs to ensure only text could be put in nothing else when required and only the correct input could be inputted when asked 5, 10, 15
+
+
+
+### Second stage testing
+For the second stage of testing my project, I utilised a more formal structured approach and created a test schedule for the application which covered each logical cycle. I then proceeded to run through the manual tests that i had made and made sure to note any errors that I found. Where the code didnt do as expected, the code was altered to correct the behaviour almost straight away unless it was a major issue which I documented via the Github issues section. After extensive testing the only issues. I found was the odd validation error that the user could input a symbol instead of there intitials. Once the code was adjusted accordingl the code past the validation.
+
+The individual python files were also validated using pep8online.com further details are below.
+
+### Testing Overview
+Testing was divided into different sections to ensure everything was tested individually with test cases developed for each area.
+ 
+A full detailed breakdown of the testing procedures and methodology can be found in the [Testing.md](TESTING.md) file here
+### Validator Testing
+pep8online.com - I utilised pep8online.com to validate my python code. All python files were checked with no errors reported.
+The following files however did include warnings regarding a line break before binary operator
+
+#### Screenshots of the validator reports are here:
+![run.py](images/pep8_fail.PNG)
+![questions.py](images/pep8_questions_fail.PNG)
+
+### Notable Bugs
+
+#### December 4th, 2021
+I started an issue on Github that I wasn’t able to sort on the spot on my main menus validation. Which I update when I was able to assess the issue and identify the code required fixing this. The update in the issue shows also my correction and what I did to resolve the issue.
+
+![Main menu validation bug](images/github_issues_main_menu_validation.PNG)
+
+#### December 7th, 2021.
+I discovered a new bug that was a hidden issue that I hadn’t thought about correctly. This was for the main game loop. Randomly it would not generate a question.... this therefore was an issue. Due to the game generating questions randomly anyway it was hard to find out at what question in the questions file was throwing it off. Upon reflect it should have been a simple spot. The reasoning behind this was because the code was getting 3 answers as well on the next line. Then printed the question and the 3 possible answers. It was unable to get 3 possible answers for any of the random questions that were only holding 2 possible answers (“true/false”).
+
+![Main game loop bug](images/github_issues_random_question.PNG)
+
+#### December 13th, 2021.
+I recieved an email during my final stages of code testing saying my API had been suspended. i believed this to be due to a over use of refreshes and updates to the
+file in a short space of time when under testing. This therefore stopped my code running at all.
+
+![API Bug error isses](images/github_api_crash.PNG)
+
+
+
 Test 1
 ![Test1](images/test_1.PNG)
 ### Python Validation
@@ -14,87 +58,31 @@ run.py - 4 warnings
 The point in the PEP8 guidelines can be found [here](https://www.python.org/dev/peps/pep-0008/) 
 
 Screenshots of the validator reports are here
-[run.py Pass](images/pep8_run_py_pass.PNG)
+[run.py Pass](images/pep8_runpy_pass.PNG)
 [questions.py Pass](images/questions_pep8_pass.PNG)
 
+
+Test 1
 Start Menu Functionality
 The start menu input was tested for the correct validation of the user input. On correct input the screen will redirect to the correct screen. On incorrect input the input validation correctly displays an error message to the user to provide guidance on how to move on.
 
+[Test1](images/test_1.PNG)
 
-
-<!--  -->Instruction Screen Functionality
+Instruction Screen Functionality
 Input validation was also tested on the instructions screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
 
-Test Case 004
-Test Case 004
+Leaderboard Screen Functionality
+Input validation was also tested on the leaderboard screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
 
-Board Size Selection
-The user is provided the ability in line with the user stories to select between two different board sizes. This provides the user the ability to control the time required to play the game. The game was tested to ensure a board of the correct size would ultimately display, and that the game recognised the dimensions of the board. The labelling of the board rows and columns was tested to ensure they correctly displayed inline with the dimensions of the board.
+[Test2](images/test_2.PNG)
 
-Test Case 005
-Test Case 005
+User intials input functionality
+Input validation was also tested on the user initials screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
 
-Board Size Selection - Input Validation
-The input validation was tested to ensure that only a correct input would allow the game to proceed, whilst incorrect inputs were handled correctly. On a correct input, the corresponding board size would display.
+[Test3](images/test_3.png)
 
-Test Case 006
-Test Case 006
 
-Ship Creation and Placement 6x6 board
-Within the ship creation and placement functionality there were a number of different areas of functionality that required testing. This was split over further sub sections where required. Initially required functionality was tested to be performing correctly, such as the correct number of ships being created for the size of the board, the ships having the correct names and size.
+User question input functionality
+Input validation was also tested on the game play mode screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
 
-Automatic orientation of ships was tested by attempting to place ships in locations where they would only fit in the one direction.
-
-On completion of positioning the ships the game successfully enters the target selection mode.
-
-Test Case 006b
-
-Ship Creation and Placement 6x6 board
-The orientation selection functionality was tested to ensure that the ships would be placed in the orientation selected by the user. The orientation was tested to ensure that the game recognised when ships would overlap, or go off the board. It was also tested to ensure that in cases where only one orientation could be selected the ship would be automatically placed.
-
-Test Case 006c
-
-Ship Creation and Placement 6x6 board
-Once functionality was confirmed to be working, the input for ship location and orientation were tested to ensure the input validation captured any incorrect inputs and handled them correctly. During this phase a small bug was detected relating to the function that checked if the coordinates entered were on the board or not. It was a simple fix achieved through refactoring the code for the check to seperate out the on board check from the printing of the boards themselves.
-
-Test Case 007
-Test Case 007
-
-Ship Creation and Placement 10x10 board
-As there are two board sizes available within the game it was important to check the functionality on both sizes. This was done to ensure that the functionality performed in the same manner for both boards. In the first part of testing on the 10x10 board, ship placement was tested for detection of automatic orientation and placement.
-
-Test Case 007b
-
-Ship Creation and Placement 10x10 board
-For the second part of the 10x10 board testing, ship placement was tested to ensure the correct detection of board limits along with other ships. This was to ensure users could not place ships off the board and that ships could not overlap.
-
-The ship creation and placement tests were repeated for lowercase entries and on all difficulties to ensure no differences occured.
-
-Test Case 008
-Test Case 008
-
-Shot Recognition - Game Turn Loop - Easy Difficulty
-Initially a 10x10 board was used to test the shot location input validation. Various incorrect entries were submitted to ensure that off board locations, or incorrect entries were detected and handled correctly. For valid inputs, tests were performed to ensure that the shot outcome was successfully processed and displayed to the user. For this the boards were visually confirmed to have updated with the correct location, messaging to the user conveyed the correct message corresponding to the shot outcome, and the symbol updated on the board to indicate the result was correct. AI shot selection was also tested alongside user shot recognition. The AI shot pattern was tested to ensure that the easy mode selected targets at random, and that each shot was a valid shot. This was manually checked by counting the number of shots the AI had taken after each round to ensure the number increased by 1. The outcome of the AI shot was tested to ensure both the correct message to the user displayed along with the board being updated correctly. The game was completed during each round of testing to ensure that the scoreboard updated correctly and that the win/lose condition correctly triggered and displayed.
-
-Test Case 009
-Test Case 009
-
-Shot Recognition - Game Turn Loop - Normal Difficulty
-The input validation for shot selection was also tested with a normal difficulty level selected to ensure no differences in results occured. Once again, various incorrect entries were made to check off board locations and invalid input formats. This was tested to ensure all input validation methods continued to perform as expected on the different difficulty level. AI shot selection was tested through multiple rounds of the game to ensure the correct shot selection pattern was apparent. For normal difficulty the AI should randomly select a target until it achieves a hit. Once a hit has been detected it should target the neighbouring tiles in a cross formation, one up, one right, one down and one left. User ships locations were deliberately placed around the edge of the board to ensure that the AI recognised that it could not select locations in the predefined pattern of shots.
-
-Test Case 010
-Test Case 010
-
-Shot Recognition - Game Turn Loop - Hard Difficulty
-Again input validation for shot selection was tested with a hard difficulty level selected to ensure no differences in results occured. AI shot selection was tested through multiple rounds of the game to ensure the correct pattern emerged. For hard difficulty the AI should evaluate the board and the remaining ships to calculate the probability of a ship being in a particular location. For the first shot, this should result in the top left of the middle four tiles being selected. From there it will recalculate the probability of a ship being in the remaining tiles for each round, once it finds a ship, it will target the surrounding tiles similar to the manner in which the normal difficulty does. For each round of testing the game was completed to ensure the scoreboard updated correctly and the win/lose condition triggered at the appropriate point.
-
-Test Case 011
-Test Case 011
-
-Shot Recognition - Game Turn Loop - 6x6 board
-Test cases 8 through 10 were repeated for the 6x6 board to ensure no differences were detected in the responses received.
-
-To navigate back to the main README click here
-
-Additional Manual Testing
-The test cases were performed multiple times during the development of the application. Late in the project the ability to quit the game without quitting the application was added. This required the testing to be repeated once more to ensure that the new functionality performed as expected whilst no previous functionality was affected.
+[Test4](images/test_4.PNG)
