@@ -1,9 +1,3 @@
-# DO TESTING FORM EXCEL MATT SENT
-# pep 8 validation pep8online.com
-# sort out spacing to long lines
-# COLOR OF BACK GROUND
-#
-
 from questions import aston_questions
 import random
 import os
@@ -206,9 +200,9 @@ def main_menu_selection():
                     break
     except Exception:
         clear()
-        print('''Hmmm you didnt follow the rules!!! You entered please try
-again with valid input.So once again Please type "P" to play,
-"R" to remind the rules or "Q" to quit.''')
+        print('''Hmmm you didnt follow the rules!!! Please try
+again with a valid input. So once again. Please type "P" to play,
+"R" to remind you of the rules or "Q" to quit.''')
         user_main_menu()
 
 
@@ -217,7 +211,7 @@ def gets_username():
     Gets the users name
     """
     clear()
-    print("Good choice on playing, but first lets get the intials to\
+    print("Good choice on playing, but first lets get the intials to \
 your name!")
     try:
         while True:
