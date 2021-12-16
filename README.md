@@ -167,14 +167,15 @@ The os library was imported to utilise the os.system and os.name functionality. 
 #### GSpread
 I also added in the GSpread function which allowed me to link the API for google sheets into the file so I could sucessfully create a live leaderboard that would change on every players input.
 
-#### Deployment
+
+## Deployment
 The site was deployed via Heroku, and the live link can be found here - [Aston Martin Quiz Heroku](https://aston-martin-quiz.herokuapp.com)
 The project was developed utilising a Code Institute provided template. During the development of the project the template was updated to increase functionality. I switched over to the new template mid project which you can see within the commit history. Some of the deployment steps below are specifically required for the new CI template and may not be applicable to older versions, or different projects.
 Project Deployment
 To deploy the project through Heroku I followed these steps:
 * Sign up / Log in to Heroku
 * From the main Heroku Dashboard page select 'New' and then 'Create New App'
-* Give the project a name - I entered Calcio-Jack and select a suitable region, then select create app. The name for the app must be unique.
+* Give the project a name - I entered Aston_Martin_Quiz and select a suitable region, then select create app. The name for the app must be unique.
 * This will create the app within Heroku and bring you to the deploy tab. From the submenu at the top, navigate to the settings tab.
 * This next step is required for creating the app when using the CI Python Deployment Template. If you created your own program without using the CI Template, you might not need to add a config var.
 * In the config vars section select the reveal config vars button. This will display the current config vars for the app, there should be nothing already there.
@@ -191,6 +192,7 @@ To deploy the project through Heroku I followed these steps:
 * In this section, confirm the correct branch of the repo is selected in the drop-down box, and then click the Enable Automatic Deploys button
 * This will ensure whenever you change something in the repo and push the changes to GitHub, Heroku will rebuild the app. If you prefer to do this manually you can utilise the manual deployment options further down. For this project I utilised the Automatic Deployment to enable me to check changes I made to the app as I developed it.
 * Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
+* There is then a link to run it in the heroku site which opens the game into a new seperate tab.
 
 ### Credits
 #### Code
@@ -208,9 +210,9 @@ Stack overflow was useful a few times whilst I developed my understanding of fil
 
 ### Acknowledgements
 I'd like to thank the following:
-•   My mentor Tim Nelson for encouraging me throughout the project and providing me with supporting and useful coding skills and knowledge.
-•   Matt Bodden for helping with the planning of the logic of how it is going to generate random numbers and pull associated questions aswell as answers.
-•   CI Tutor support for helping in regards to sorting through the list of my excel sheet.
+* My mentor Tim Nelson for encouraging me throughout the project and providing me supporting and useful coding skills and knowledge.
+* Matt Bodden for helping with the planning of the logic in regards to how it will run (gameloop), general coding queries, Aswell as supplying me with a mockup for how he carried out his testing to encourage me to show further advancement in the way I am testing my code that i am building.
+* CI Tutor support for helping in regards to sorting through the list of my excel sheet.
 
 
 

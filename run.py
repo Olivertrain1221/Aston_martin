@@ -1,7 +1,6 @@
 from questions import aston_questions
 import random
 import os
-# from os import system, name
 import time
 import gspread
 from google.oauth2.service_account import Credentials
@@ -119,7 +118,7 @@ def leaderboard():
     """
     Gets the leaderboard on screen and prints top players from excel
     """
-    print("got to leaderboard")
+    print("Loading Live results now...")
     first_place_five = get_scoresheet_list(5, 1)
     first_place_ten = get_scoresheet_list(10, 1)
     first_place_fifteen = get_scoresheet_list(15, 1)
