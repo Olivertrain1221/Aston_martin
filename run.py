@@ -152,12 +152,12 @@ def leaderboard():
     print(" " * 11 + second_place_ten[0] + " " + second_place_ten[1] +
           " " * 41 + first_place_fifteen[0] + " " + first_place_fifteen[1])
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
-    print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|"
-          + " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
-    print(" " * 2 + first_place_ten[0] + " " + first_place_ten[1] + " " * 2
-          + "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " "
-          + third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " "
-          + second_place_fifteen[1] + " " * 2 + "|" + " " * 9 + "|" +
+    print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" +
+          " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
+    print(" " * 2 + first_place_ten[0] + " " + first_place_ten[1] + " " * 2 +
+          "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " +
+          third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " " +
+          second_place_fifteen[1] + " " * 2 + "|" + " " * 9 + "|" +
           " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
     print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 +
           "_" * 7 + "/" + " " * 10 + "\\" + "_" * 7)
@@ -217,8 +217,8 @@ def gets_username():
     Gets the users name
     """
     clear()
-    print("Good choice on playing, but first lets get the intials to \
-        your name!")
+    print("Good choice on playing, but first lets get the intials to\
+your name!")
     try:
         while True:
             users_name = str(input("Enter 1 to 3 letters:\n"))
@@ -241,14 +241,14 @@ def rule_options():
     when selected will display rules a
     """
     clear()
-    print('''Welcome to the Aston Martin quiz, a quiz for all you
-buzzing petrol heads!''')
+    print("Welcome to the Aston Martin quiz, a quiz for all you\
+buzzing petrol heads!")
     print(" ")
-    print('''In this game you will be asked a range of questions
-and the answers will need to be inputted but using the numbers on
-your keyboard "1, 2, 3".''')
+    print("In this game you will be asked a range of questions\
+and the answers will need to be inputted but using the numbers on\
+your keyboard '1, 2, 3'.")
     print(" ")
-    print('''Press M for menu to return''')
+    print("Press M for menu to return")
     try:
         while True:
             return_to_menu = input("")
@@ -341,15 +341,15 @@ def user_gameplay_input():
         try:
             users_choice = input("1, 2 or 3:\n")
             users_choice = int(users_choice)
-            clear()
-            print(f"You selected {str(users_choice)}!")
+            print(f"You selected {int(users_choice)}!")
             if users_choice not in [1, 2, 3]:
                 raise Exception
+                user_gameplay_input()
             else:
                 return users_choice
         except Exception:
             print("You didnt obviously read any of my hard work. \
-                its 1 2 or 3!")
+its 1 2 or 3!")
 
 
 startup()
