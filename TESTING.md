@@ -1,55 +1,26 @@
  # Test Cases and Execution Report
-To navigate back to the main README click here
+To navigate back to the main README click [here](README.md)
 
 The full testing spreadsheet containing all the tests performed during the testing phase of development can be found here
 
-Test Case 001
-Test Case 001
-
-Python Validation
-The Python code was checked using the pep8 validator available at pep8online.com. No errors were reported by the validator. The following files however did include warnings regarding a line break before binary operator
+Test 1
+![Test1](images/test_1.PNG)
+### Python Validation
+The Python code was checked using the pep8 validator available at pep8online.com. Errors were reported for to longer lines i edited my code accordingly until there were no reported errors by the validator. The following file however did include warnings regarding a line break before binary operator this is acceptable due to some code needing to be on more than one line.
 
 list of files with warnings
-board.py - 2 warnings
-comp.py - 1 warning
-game.py - 27 warnings
-player.py - 2 warnings
-setup.py - 4 warnings The warning suggests that there should not be a line break before a binary operator, however on checking with the python pep 8 guidelines it explicitly states that the line break should be before the binary operator.
-The point in the PEP8 guidelines can be found here
+run.py - 4 warnings
+
+The point in the PEP8 guidelines can be found [here](https://www.python.org/dev/peps/pep-0008/) 
 
 Screenshots of the validator reports are here
-blank.py file
-board.py file
-boat.py file
-comp.py file
-editscreen.py file
-game.py file top
-player.py file
-run.py file
-setup.py file
-start.py file
-CSS Validation
-Whilst I only added a couple of lines of custom CSS to the Code Institute provided template, I tested the site using the Jigsaw CSS Validator service which returned no errors. Two warnings related to custom prefixes were identified.
-
-The full CSS Validator report is available here on the CSS Validator Site
-
-CSS Validator Report
-
-HTML Validation
-In order to place the svg background onto the site, I inserted a div with a class name of background and pasted the svg code from Adobe Illustrator. This was the only alteration made to the Code Institute provided template.
-
-When running the site through the HTML validator it flags 14 errors. The errors are relating to the template itself and not the elements I created. The errors that do appear relate to how the template is combining two different HTML files. As we are restricted from manipulating the template I am prevented from attempting to resolve these errors.
-
-The full report is available here on the HTML Validator Site
-
-Test Case 002
-Test Case 002
+[run.py Pass](images/pep8_run_py_pass.PNG)
+[questions.py Pass](images/questions_pep8_pass.PNG)
 
 Start Menu Functionality
-The start menu input was tested for the correct validation of the user input. On correct input the screen will redirect to the correct screen. On incorrect input the input validation correctly displays an error message to the user to provide guidance on how to move on before repeating the initial input message.
+The start menu input was tested for the correct validation of the user input. On correct input the screen will redirect to the correct screen. On incorrect input the input validation correctly displays an error message to the user to provide guidance on how to move on.
 
-Test Case 003
-Test Case 003
+
 
 Instruction Screen Functionality
 Input validation was also tested on the instructions screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
