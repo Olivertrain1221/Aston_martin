@@ -152,7 +152,7 @@ def leaderboard():
     print()
     print()
     print(" " * 11 + first_place_ten[0] + " " + first_place_ten[1] +
-          " " * 39 + first_place_fifteen[0] + " " + first_place_fifteen[1])
+          " " * 41 + first_place_fifteen[0] + " " + first_place_fifteen[1])
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
     print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" +
           " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
@@ -262,6 +262,7 @@ your keyboard '1, 2, 3'.")
                 startup()
     except Exception:
         print(" DERRRRR try 'M'")
+        time.sleep(1)
         rule_options()
 
 
