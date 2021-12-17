@@ -1,6 +1,7 @@
 # Aston Martin Quiz
 ## Introduction
 The Aston Martin quiz is a browser built quiz with Python. It is a simple multiple choice based on the prestigious vehicle brand Aston Martin, highlighting the vehicles specs, comforts and interesting facts.
+
 As the game was developed in Python for use in the terminal, it utilises the Code Institute Python Template to generate a "terminal" onto the page, making it available within a web browser.
 
 ![Aston Martin Quiz](images/startup_screen.PNG)
@@ -15,7 +16,7 @@ View the live website on [Heroku](https://aston-martin-quiz.herokuapp.com) Pleas
 #### Site Goals
 * To provide users with a fun and simple to play quiz.
 * To provide users with alternative options to choose a different amount of questions.
-* To provide users with the ability to open a spreadsheet and see there ranking in comparison of other players
+* To provide users with the ability to open the leaderboard option and see there ranking in comparison of other players.
 
 #### User Stories
 * As a user I want an online quiz about a luxury car brandw
@@ -92,7 +93,7 @@ When the user confirms that they would like to play the game, they are greeted b
 
 ![Amount of questions](images/amount_of_games.PNG)
 
-Once the name has been inputted the game loop comences and start to generate the questions from a seperate file. The questions are then displayed along witht the potential answers and the option to input a 1,2,3 this is then up to the user to input there choice.
+Once the name has been inputted the game loop comences and start to generate the questions from a seperate file. The questions are then displayed along with the potential answers and the option to input a 1,2,3 this is then up to the user to input there choice.
 
 ![Game question layout](images/game_running.PNG) 
 

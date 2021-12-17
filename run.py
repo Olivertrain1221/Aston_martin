@@ -47,7 +47,7 @@ def startup():
 def user_main_menu():
     """
     Displays the main menu and gives the user the option to
-    read rules, playu or quit
+    read rules, play or quit
     """
     print("Are you ready to play?")
     print("""
@@ -60,6 +60,9 @@ def user_main_menu():
 
 
 def main_game_loop():
+    """
+    runs the fuctions and allows me to pass data in/out
+    """
     users_name = gets_username()
     question_selection = question_amount_selection()
     game_questions = generate_random_question(question_selection)
@@ -70,6 +73,10 @@ def main_game_loop():
 
 
 def end_of_game_message(users_name, point):
+    """
+    Displays the user with an end of game message
+    with the users name and also the point
+    """
     clear()
     print("Thankyou ever so much for playing my the Aston Martin Quiz")
     print("")
@@ -93,14 +100,16 @@ def add_to_leaderboard(question_selection, users_name, point):
 
 
 def get_scoresheet_list(rounds, position):
-    # worksheet
+    """
+    Gets the values of all the worksheets
+    5 - 10 - 15 and puts them in ascending order
+    """
     if rounds == 5:
         worksheet = SHEET.worksheet('scoreboard-5')
     elif rounds == 10:
         worksheet = SHEET.worksheet('scoreboard-10')
     elif rounds == 15:
         worksheet = SHEET.worksheet('scoreboard-15')
-    # print(worksheet)
     worksheet_values = worksheet.get_all_values()
     score = worksheet_values
     length_score = len(score)
@@ -176,7 +185,8 @@ def leaderboard():
 
 def main_menu_selection():
     """
-    Checking what the user inputs and validates,
+    Checking what the user inputs and validates
+    at main menu
     """
     try:
         while True:
@@ -231,7 +241,7 @@ your name: {users_name}")
 
 def rule_options():
     """
-    when selected will display rules a
+    when selected will display rules
     """
     clear()
     print("Welcome to the Aston Martin quiz, a quiz for all you\
