@@ -136,14 +136,14 @@ def leaderboard():
     third_place_five = get_scoresheet_list(5, 3)
     third_place_ten = get_scoresheet_list(10, 3)
     third_place_fifteen = get_scoresheet_list(15, 3)
-    # clear()
+    clear()
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print(" " * 33 + first_place_five[0] + " " + first_place_five[1])
     print(" " * 32 + "_" * 9 + " " * 34)
     print(" " * 31 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 34)
     print(" " * 25 + second_place_five[0] + " " + second_place_five[1] +
-          " " + "|" + " " * 9 + "|" + " " * 2 +
+          " " * 2 + "|" + " " * 9 + "|" + " " * 2 +
           third_place_five[0] + " " + third_place_five[1])
     print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
     print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
@@ -158,7 +158,7 @@ def leaderboard():
           " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
     print(" " * 2 + second_place_ten[0] + " " + second_place_ten[1] + " " * 2 +
           "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " +
-          third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " " +
+          third_place_ten[1] + " " * 24 + second_place_fifteen[0] + " " +
           second_place_fifteen[1] + " " * 2 + "|" + " " * 9 + "|" +
           " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
     print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 +
