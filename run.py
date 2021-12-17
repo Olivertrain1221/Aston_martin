@@ -135,7 +135,7 @@ def leaderboard():
     print(" " * 32 + "_" * 9 + " " * 34)
     print(" " * 31 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 34)
     print(" " * 25 + second_place_five[0] + " " + second_place_five[1] +
-          " " * 1 + "|" + " " * 9 + "|" + " " * 2 +
+          " " * 2 + "|" + " " * 9 + "|" + " " * 2 +
           third_place_five[0] + " " + third_place_five[1])
     print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
     print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
