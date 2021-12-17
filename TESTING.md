@@ -42,9 +42,12 @@ file in a short space of time when under testing. This, therefore, stopped my co
 ![API Bug error isses](images/github_api_crash.PNG)
 
 
+Below is a detailed excel sheet of all the testing carrid out with the supporting screenshots from the spreadsheet. You can view the spreadsheet [here.](documentation/testing-schedule-complete.pdf)
+
 
 Test 1
 ![Test1](images/test_1.PNG)
+![Test2](images/test_1a.PNG)
 ### Python Validation
 The Python code was checked using the pep8 validator available at pep8online.com. Errors were reported for longer lines I edited my code accordingly until there were no reported errors by the validator. The following file however did include warnings regarding a line break before binary operator this is acceptable due to some code needing to be on more than one line.
 
