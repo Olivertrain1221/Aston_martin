@@ -103,7 +103,6 @@ def get_scoresheet_list(rounds, position):
     # print(worksheet)
     worksheet_values = worksheet.get_all_values()
     score = worksheet_values
-    print(score)
     length_score = len(score)
     for i in range(0, length_score):
         for j in range(0, length_score-i-1):
@@ -111,7 +110,6 @@ def get_scoresheet_list(rounds, position):
                 tempo = score[j]
                 score[j] = score[j + 1]
                 score[j + 1] = tempo
-    print(score)
     return score[length_score - (position)]
 
 
@@ -129,7 +127,7 @@ def leaderboard():
     third_place_five = get_scoresheet_list(5, 3)
     third_place_ten = get_scoresheet_list(10, 3)
     third_place_fifteen = get_scoresheet_list(15, 3)
-    # clear()
+    clear()
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print(" " * 33 + first_place_five[0] + " " + first_place_five[1])
