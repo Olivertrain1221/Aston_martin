@@ -66,7 +66,7 @@ Start Menu Functionality
 
 The start menu input was tested for the correct validation of the user input. On correct input, the screen will redirect to the correct screen. On incorrect input, the input validation correctly displays an error message to the user to guide how to move on.
 
-![Test2](images/test_1.PNG)
+![Test2](images/test_2.PNG)
 
 Instruction Screen Functionality
 
