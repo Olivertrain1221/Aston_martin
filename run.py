@@ -1,6 +1,3 @@
-# wHERE SCORES ARE 2 DIGITS THEY ARE GOINMG TO BE LONGER
-
-
 from questions import aston_questions
 import random
 import os
