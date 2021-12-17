@@ -170,7 +170,7 @@ and
 ## Credits
 #### Code
 I was informed of a method to clear the terminal by mentor Tim Nelson who had found the method in [slack overview](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) provided by. Tim had suggested that I used the method successfully within my project to keep the window clearer to improve UX.
-
+![ClearTerminal](images/clear_term.PNG)
 ### Content
 
 #### Background Image
