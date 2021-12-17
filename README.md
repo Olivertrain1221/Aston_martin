@@ -48,7 +48,9 @@ Implementation:
 
 I used lucid chart to help my understanding and to support this project's development. This allowed me as the developer to plan the logic and also how each input a user puts in will be checked.
 
-![Game_flow](images/)
+![Game_flow](images/basic_game_running.PNG)
+![Inputted_data](images/validating_user_data.PNG)
+
 ### The Skeleton Plane
 #### Wireframe mock-ups
 Given that the application will be run within a terminal emulator which was provided within the CI template, there are limited options available in regards to how the program is displayed. Early on within the development of the theme of the quiz, it made sense to have a luxury feel photo to the luxury brand this then fitted in with the project and contents in the quiz to further the UI more pleasing to the user, I located a suitable background image on iStock. To position the terminal appropriately for the background graphic, and keep user experience in mind, I decided to centre the terminal horizontally on the screen.  
