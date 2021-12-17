@@ -58,15 +58,15 @@ run.py - 4 warnings
 The point in the PEP8 guidelines can be found [here](https://www.python.org/dev/peps/pep-0008/) 
 
 Screenshots of the validator reports are here
-[run.py Pass](images/pep8_runpy_pass.PNG)
-[questions.py Pass](images/questions_pep8_pass.PNG)
+![run.py Pass](images/pep8_runpy_pass.PNG)
+![questions.py Pass](images/questions_pep8_pass.PNG)
 
 
-Test 1
+Test 2
 Start Menu Functionality
 The start menu input was tested for the correct validation of the user input. On correct input the screen will redirect to the correct screen. On incorrect input the input validation correctly displays an error message to the user to provide guidance on how to move on.
 
-[Test1](images/test_1.PNG)
+![Test2](images/test_1.PNG)
 
 Instruction Screen Functionality
 Input validation was also tested on the instructions screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
@@ -74,15 +74,29 @@ Input validation was also tested on the instructions screen along with testing t
 Leaderboard Screen Functionality
 Input validation was also tested on the leaderboard screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
 
-[Test2](images/test_2.PNG)
+![Test3](images/test_2.PNG)
 
 User intials input functionality
 Input validation was also tested on the user initials screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
 
-[Test3](images/test_3.png)
+![Test4](images/test_3.PNG)
 
+User question amount input functionality
+Input validation was also tested on the amount of questions to play screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
 
-User question input functionality
-Input validation was also tested on the game play mode screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
+![Test5](images/test_4.PNG)
 
-[Test4](images/test_4.PNG)
+User input to the game questions
+Input validation was also tested on the game with actual input as an answer along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
+
+![Test6](images/test_5.PNG)
+
+User correct input to the game questions
+Input validation was also tested on the user guessing the correct answer screen along with testing that the user could launch the game from the screen. On incorrect input the screen displays the correct error message with guidance on how to correctly input the required values. On correct input the desired functionality proceeded as designed.
+
+![Test7](images/test_6.PNG)
+
+At end of the game it added to the sheets file
+Checked that the code ran in the back ground to log the live leaderboard.
+
+![Test8](images/test_7.PNG)

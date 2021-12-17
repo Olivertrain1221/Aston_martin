@@ -166,9 +166,10 @@ Once in the file Because I am including packages in the requirements.txt file. y
 1: how to download just the packages required for this project (pip3 install -r requirements.txt)
 and
 2: how to freeze the commands for a local copy of this project on their own account (pip3 freeze --local > requirements.txt)
+
 ## Credits
 #### Code
-I was informed of a method to clear the terminal by mentor Tim Nelson who had found the method in a Python cheat sheet provided by coding4you. Tim had suggested that i used the method successfully within my project to keep the window clearer to improve UX.
+I was informed of a method to clear the terminal by mentor Tim Nelson who had found the method in [slack overview](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) provided by. Tim had suggested that I used the method successfully within my project to keep the window clearer to improve UX.
 
 ### Content
 
