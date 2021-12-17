@@ -1,3 +1,6 @@
+# wHERE SCORES ARE 2 DIGITS THEY ARE GOINMG TO BE LONGER
+
+
 from questions import aston_questions
 import random
 import os
@@ -103,15 +106,16 @@ def get_scoresheet_list(rounds, position):
     # print(worksheet)
     worksheet_values = worksheet.get_all_values()
     score = worksheet_values
+    print(score)
     length_score = len(score)
     for i in range(0, length_score):
         for j in range(0, length_score-i-1):
-            if (score[j][1] > score[j + 1][1]):
+            if (int(score[j][1]) > int(score[j + 1][1])):
                 tempo = score[j]
                 score[j] = score[j + 1]
                 score[j + 1] = tempo
-    # print("running end of scoresheet new")
-    return score[length_score - (position + 1)]
+    print(score)
+    return score[length_score - (position)]
 
 
 def leaderboard():
@@ -128,14 +132,14 @@ def leaderboard():
     third_place_five = get_scoresheet_list(5, 3)
     third_place_ten = get_scoresheet_list(10, 3)
     third_place_fifteen = get_scoresheet_list(15, 3)
-    clear()
+    # clear()
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print(" " * 33 + first_place_five[0] + " " + first_place_five[1])
     print(" " * 32 + "_" * 9 + " " * 34)
     print(" " * 31 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 34)
     print(" " * 25 + second_place_five[0] + " " + second_place_five[1] +
-          " " * 2 + "|" + " " * 9 + "|" + " " * 2 +
+          " " + "|" + " " * 9 + "|" + " " * 2 +
           third_place_five[0] + " " + third_place_five[1])
     print(" " * 25 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 7)
     print(" " * 24 + "|" + " " + "2ND" + " " * 17 + "3RD" + "|")
@@ -143,12 +147,12 @@ def leaderboard():
     print(" " * 24 + "|" + "_" * 24 + "|")
     print()
     print()
-    print(" " * 11 + second_place_ten[0] + " " + second_place_ten[1] +
+    print(" " * 11 + first_place_ten[0] + " " + first_place_ten[1] +
           " " * 39 + first_place_fifteen[0] + " " + first_place_fifteen[1])
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
     print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" +
           " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
-    print(" " * 2 + first_place_ten[0] + " " + first_place_ten[1] + " " * 2 +
+    print(" " * 2 + second_place_ten[0] + " " + second_place_ten[1] + " " * 2 +
           "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " +
           third_place_ten[1] + " " * 22 + second_place_fifteen[0] + " " +
           second_place_fifteen[1] + " " * 2 + "|" + " " * 9 + "|" +
