@@ -12,11 +12,25 @@
     <style>
         body {
             font-family: Arial;
+            background:#000;
         }
 
+        #background {
+            background: url("https://github.com/Olivertrain1221/Aston_martin/blob/2ecd1ad3c92162ce7a276ada79146014da031912/images/aston-pic.jpg");
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            height: 100vh;
+            width: 100%;            
+        }
+
+
         /**
-        * Default styles for xterm.js
+        * Default styles for xterm.js 
         */
+
+        
 
         .xterm {
             font-feature-settings: "liga"0;
@@ -167,7 +181,9 @@
         }
     </style>
 </head>
-
+<div>
 @{body}
+</div>
 
+<div id="background"></div>
 </html>
