@@ -136,7 +136,7 @@ def leaderboard():
     third_place_five = get_scoresheet_list(5, 3)
     third_place_ten = get_scoresheet_list(10, 3)
     third_place_fifteen = get_scoresheet_list(15, 3)
-    clear()
+    # clear()
     print(" " * 24 + "########  LEADERBOARD  ########" + " " * 25)
     print()
     print(" " * 33 + first_place_five[0] + " " + first_place_five[1])
