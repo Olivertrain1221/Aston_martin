@@ -1,13 +1,13 @@
 aston_questions = [
     {
-        'question': 'What is the biggest naturally aspirated engine that \
-Aston Martin sell?:',
+        'question': 'What is the biggest naturally aspirated \
+engine that Aston Martin sell?:',
         'answers': ['V8', 'V12', '1.8'],
         'correct': 'V12'
     },
     {
-        'question': 'You may remember in James bond there is a "special" branch \
-for customiseable anything:',
+        'question': 'You may remember in James bond \
+there is a "special" branch for customiseable anything:',
         'answers': ['Cue', 'Q', 'K'],
         'correct': 'Q'
     },
@@ -65,8 +65,8 @@ and has .... bhp:',
         'correct': 'Dog leg 7 speed manual'
     },
     {
-        'question': 'What is so special About the ranges sportscars in \
-terms of weight over each axel (front to rear):',
+        'question': 'What is so special About the ranges \
+sportscars in terms of weight over each axel (front to rear):',
         'answers': ['45:55',
                     '51:49',
                     '30:70'],
@@ -74,7 +74,7 @@ terms of weight over each axel (front to rear):',
     },
     {
         'question': 'What is the car used in the film Casino \
-royale that rolls:',
+ royale that rolls:',
         'answers': ['Vantage',
                     'DB9',
                     'DBS'],
@@ -98,7 +98,7 @@ royale that rolls:',
         'question': 'What is special about the Vantage range:',
         'answers': ['The car was only originaly designed to take a V8',
                     'The car is big enough for golf clubs in the boot',
-                    'The car is grey unless speciefied otherwise'],
+                    'The car is grey unless specified otherwise'],
         'correct': 'The car was only originaly designed to take a V8'
     },
     {
@@ -123,8 +123,8 @@ royale that rolls:',
         'correct': '1913'
     },
     {
-        'question': 'In James Bond the big red button under \
-the gear lever was to do what?:',
+        'question': 'In James Bond the big red \
+button under the gear lever was to do what?:',
         'answers': ['Super speed',
                     'Fire the rockets',
                     'Ejector Seat'],
@@ -152,8 +152,8 @@ the gear lever was to do what?:',
         'correct': 'V8 Twin Super Charge'
     },
     {
-        'question': 'When the DBS Superleggera was lauched with \
-    Tag Haeur what gift did you get with the car?',
+        'question': 'When the DBS Superleggera was lauched \
+ with Tag Haeur what gift did you get with the car?',
         'answers': ['Washing Machine',
                     'Embroided lighter',
                     'Limited edition Watch'],
