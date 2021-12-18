@@ -4,7 +4,7 @@ The Aston Martin quiz is a browser built quiz with Python. It is a simple multip
 
 As the game was developed in Python for use in the terminal, it utilizes the Code Institute Python Template to generate a "terminal" onto the page, making it available within a web browser.
 
-![Aston Martin Quiz](images/startup_screen.PNG)
+![Aston Martin Quiz](images/startup_screen.png)
 
 View the live website on [Heroku](https://aston-martin-quiz.herokuapp.com) Please note: To open any links in this document in a new browser tab, please press Ctrl + Click.
 
@@ -48,8 +48,8 @@ Implementation:
 
 I used lucid chart to help my understanding and to support this project's development. This allowed me as the developer to plan the logic and also how each input a user puts in will be checked.
 
-![Game_flow](images/basic_game_running.PNG)
-![Inputted_data](images/validating_user_data.PNG)
+![Game_flow](images/basic_game_running.png)
+![Inputted_data](images/validating_user_data.png)
 
 ### The Skeleton Plane
 #### Wireframe mock-ups
@@ -72,18 +72,18 @@ Once I had decided on the theme of the quiz itself ie Aston Martin due to my mec
 #### Welcome Screen
 At the start of the game the user is greeted with a menu which consists of a Quit option, Leaderboard option, Rules and Play option users are told what they are required to input for them to access a menu.
 
-![Startup screen](images/startup_screen.PNG)
+![Startup screen](images/startup_screen.png)
 
 
 #### Instructions Screen
 If users select the instructions option from the main menu the screen will display an overview of the game and how to play. As well as the option to return to the main menu.
 
-![Instructions screen](images/instructions.PNG)
+![Instructions screen](images/instructions.png)
 
 #### Leaderboard Screen
 If the user selects the leaderboard option it prints a leaderboard to the screen and shows 1,2,3 for the 5, 10, and 15 game option and it gets the highest users points along with the key to that value to ensure its a live leaderboard
 
-![Leaderboard screen](images/leaderboard.PNG)
+![Leaderboard screen](images/leaderboard.png)
 
 #### Play option
 When selecting the play option the game then starts the game loop which then does the below.
@@ -91,25 +91,25 @@ When selecting the play option the game then starts the game loop which then doe
 #### Name Option
 The option is then given to the user to put in two alphabetic characters their initials this is so it can show their name in the leaderboard with their point achieved in the excel sheet.
 
-![Name Selection](images/name.PNG)
+![Name Selection](images/name.png)
 
 #### Question amount selection
 When the user confirms that they would like to play the game, they are greeted by a message asking them how many questions in the game would they like to play.
 
-![Amount of questions](images/amount_of_games.PNG)
+![Amount of questions](images/amount_of_games.png)
 
 Once the name has been inputted the game loop commences and starts to generate the questions from a separate file. The questions are then displayed along with the potential answers and the option to input a 1,2,3 this is then up to the user to input their choice.
 
-![Game question layout](images/game_running.PNG) 
+![Game question layout](images/game_running.png) 
 
 This then calls for the function to pass in the actual correct answer in comparison to the user's guess. Depending on if it is correct depends on what the code does next. 
 If the answer inputted by the user is the correct answer it adds a point to the user's score and gives a well-done message with the current user's point value.
 
-![Correct answer ](images/amount_of_games.PNG)
+![Correct answer ](images/amount_of_games.png)
 
 If the answer inputted by the user is wrong it gives the user a message of that incorrect onto the next question.
 
-![Wrong answer](images/wrong_answer.PNG)
+![Wrong answer](images/wrong_answer.png)
 
 After the game is finished it adds the user's initials and their score to the excel sheet. This is how the leaderboard gets all of the players' initials and their points and works out accordingly a 1st, 2nd, 3rd
 
@@ -176,7 +176,7 @@ and
 ## Credits
 #### Code
 I was informed of a method to clear the terminal by mentor Tim Nelson who had found the method in [slack overview](https://stackoverflow.com/questions/2084508/clear-terminal-in-python) provided by. Tim had suggested that I used the method successfully within my project to keep the window clearer to improve UX.
-![ClearTerminal](images/clear_term.PNG)
+![ClearTerminal](images/clear_term.png)
 
 ### Content
 
