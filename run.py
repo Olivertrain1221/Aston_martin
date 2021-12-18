@@ -156,9 +156,9 @@ def leaderboard():
     print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
     print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" +
           " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
-    print(" " * 2 + second_place_ten[0] + " " + second_place_ten[1] + " " * 2 +
+    print(" " * 2 + second_place_ten[0] + " " + second_place_ten[1] + " " +
           "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " +
-          third_place_ten[1] + " " * 24 + second_place_fifteen[0] + " " +
+          third_place_ten[1] + " " * 23 + second_place_fifteen[0] + " " +
           second_place_fifteen[1] + " " * 2 + "|" + " " * 9 + "|" +
           " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
     print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 +
