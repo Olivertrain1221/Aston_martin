@@ -153,21 +153,21 @@ def leaderboard():
     print()
     print(" " * 11 + first_place_ten[0] + " " + first_place_ten[1] +
           " " * 41 + first_place_fifteen[0] + " " + first_place_fifteen[1])
-    print(" " * 9 + "_" * 9 + " " * 38 + "_" * 9 + " " * 8)
-    print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 3 + "|" + " " * 36 + "|" +
-          " " * 3 + "1ST" + " " * 3 + "|" + " " * 8)
+    print(" " * 9 + "_" * 10 + " " * 38 + "_" * 10 + " " * 8)
+    print(" " * 8 + "|" + " " * 3 + "1ST" + " " * 4 + "|" + " " * 36 + "|" +
+          " " * 3 + "1ST" + " " * 4 + "|" + " " * 8)
     print(" " * 2 + second_place_ten[0] + " " + second_place_ten[1] + " " * 2 +
-          "|" + " " * 9 + "|" + " " * 2 + third_place_ten[0] + " " +
+          "|" + " " * 10 + "|" + " " * 2 + third_place_ten[0] + " " +
           third_place_ten[1] + " " * 23 + second_place_fifteen[0] + " " +
-          second_place_fifteen[1] + " " * 2 + "|" + " " * 9 + "|" +
+          second_place_fifteen[1] + " " * 2 + "|" + " " * 10 + "|" +
           " " * 2 + third_place_fifteen[0] + " " + third_place_fifteen[1])
-    print(" " * 2 + "_" * 6 + "/" + " " * 9 + "\\" + "_" * 6 + " " * 23 +
-          "_" * 7 + "/" + " " * 10 + "\\" + "_" * 7)
+    print(" " * 2 + "_" * 6 + "/" + " " * 10 + "\\" + "_" * 6 + " " * 22 +
+          "_" * 8 + "/" + " " * 10 + "\\" + "_" * 7)
     print(" " * 1 + "|" + " " + "2ND" + " " * 16 + "3RD" + "|" + " " * 21 +
-          "|" + " " + "2ND" + " " * 19 + "3RD" + "|")
-    print(" " * 1 + "|" + " " * 23 + "|" + " " * 21 + "|" + " " * 26 + "|")
+          "|" + " " + "2ND" + " " * 19 + "3RD" + " " + "|" + " ")
+    print(" " * 1 + "|" + " " * 23 + "|" + " " * 21 + "|" + " " * 27 + "|")
     print(" " * 1 + "|" + " " * 8 + "10 Quiz" + " " * 8 + "|" + " " * 21 +
-          "|" + " " * 10 + "15 quiz" + " " * 9 + "|")
+          "|" + " " * 10 + "15 quiz" + " " * 10 + "|")
     print('''Press M for menu to return''')
     try:
         while True:
@@ -224,8 +224,8 @@ def gets_username():
 your name!")
     try:
         while True:
-            users_name = str(input("Enter 1 to 3 letters:\n"))
-            if len(users_name) <= 3 and users_name.isalpha():
+            users_name = str(input("Enter your initals (first and last).\n"))
+            if len(users_name) <= 2 and users_name.isalpha():
                 clear()
                 time.sleep(1.5)
                 print(f"Excellent thankyou for entering \
