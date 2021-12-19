@@ -245,11 +245,11 @@ def rule_options():
     """
     clear()
     print("Welcome to the Aston Martin quiz, a quiz for all you\
-buzzing petrol heads!")
+ buzzing petrol heads!")
     print(" ")
     print("In this game you will be asked a range of questions\
-and the answers will need to be inputted but using the numbers on\
-your keyboard '1, 2, 3'.")
+ and the answers will need to be inputted but using the numbers on\
+ your keyboard '1, 2, 3'.")
     print(" ")
     print("Press M for menu to return")
     try:
